@@ -1,0 +1,200 @@
+/* ----------------------------MAIN PAGE CSS----------------------- */
+body {
+  background: #efefef;
+}
+.button {
+  background-color: #0bad72;
+  border: none;
+  font-size: 17px;
+  color: #ffffff;
+  padding: 12px 15px;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 7px;
+  display: block;
+  border-left: #036d46 5px solid;
+  font-weight: 500;
+}
+
+.button:hover {
+  background: #036d46;
+}
+
+.tb {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.ts .first h2,
+h3 {
+  text-align: left;
+}
+
+.ts {
+  display: grid;
+  grid-template-columns: repeat(3, 500px);
+  grid-template-rows: repeat(1, 75px);
+  gap: 2px;
+}
+
+.ts .first,
+.second,
+.third {
+  text-align: left;
+  padding: 10px;
+}
+.inner-cont {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ----------------------------RESULT TABLE CSS---------------------------- */
+.results {
+  margin-top: 30px;
+}
+
+#example,
+.example,
+.example2 {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#example td,
+.example td,
+.example2 td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 14px;
+}
+
+#example th,
+.example th,
+.example2 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+#example tr:nth-child(even),
+.example tr:nth-child(even),
+.example2 tr:nth-child(even) {
+  background-color: #fffefe;
+}
+
+#example tr:hover,
+.example tr:hover,
+.example2 tr:hover {
+  background-color: #ddd;
+}
+
+#example th,
+.example th,
+.example2 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #11a1df;
+  color: white;
+}
+
+.checks {
+  display: grid;
+  grid-template-columns: repeat(4, 362px);
+  grid-template-rows: repeat(1, 75px);
+  gap: 14px;
+}
+
+.checks2 {
+  display: grid;
+  grid-template-columns: repeat(4, 362px);
+  grid-template-rows: repeat(1, 75px);
+  gap: 14px;
+}
+
+/* ------------------------- TABLE BUTTONS ----------------------- */
+.pagination {
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: auto;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+.page-item:first-child .page-link {
+  margin-left: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.custom-select-sm {
+  height: calc(1.5em + 0.5rem + 2px);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.custom-select {
+  display: inline-block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  vertical-align: middle;
+  background: #fff
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+    no-repeat right 0.75rem center/8px 10px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
