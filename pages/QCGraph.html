@@ -16,7 +16,7 @@
     <!-- 
     <link rel="stylesheet" href="datepicker/easepick.skin.blue.css" />
     <link rel="stylesheet" href="datepicker/easepick.skin.light.css" /> -->
-    <title>Order/Test Time Management</title>
+    <title>QC Graph (Quality Control Report)</title>
   </head>
   <body>
     <div class="sm:p-1 md:p-3 xxl:container p-5 font-sans">
@@ -26,7 +26,7 @@
           <p
             class="sm:font-semibold sm:text-xl md:text-xl text-2xl font-bold underline underline-offset-8 align-middle"
           >
-            Order/Test Time Management
+            QC Graph (Quality Control Report)
           </p>
         </div>
         <!-- Buttons for report type -->
@@ -109,178 +109,6 @@
             >
               <div class="xl:w-64 xxl:w-64">
                 <label
-                  for="orderEntered"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Order Entered By:</label
-                >
-
-                <select
-                  id="orderEntered"
-                  name="orderEntered"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="first"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    First
-                  </option>
-                  <option
-                    value="second"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Second
-                  </option>
-                  <option
-                    value="third"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Third
-                  </option>
-                </select>
-              </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="labEnteredBy"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Lab# Entered By:</label
-                >
-
-                <select
-                  id="labEnteredBy"
-                  name="labEnteredBy"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="first"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    First
-                  </option>
-                  <option
-                    value="second"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Second
-                  </option>
-                  <option
-                    value="third"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Third
-                  </option>
-                </select>
-              </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="resultEnteredBy"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Result Entered By:</label
-                >
-
-                <select
-                  id="resultEnteredBy"
-                  name="resultEnteredBy"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="first"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    First
-                  </option>
-                  <option
-                    value="second"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Second
-                  </option>
-                  <option
-                    value="third"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Third
-                  </option>
-                </select>
-              </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="commentEnteredBy"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Comments Entered By:</label
-                >
-
-                <select
-                  id="commentEnteredBy"
-                  name="commentEnteredBy"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="first"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    First
-                  </option>
-                  <option
-                    value="second"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Second
-                  </option>
-                  <option
-                    value="third"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Third
-                  </option>
-                </select>
-              </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
                   for="test"
                   class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
                   >Test:</label
@@ -288,28 +116,22 @@
 
                 <select id="test" name="test" class="rangeSelect w-72" multiple>
                   <option
-                    value="selectAll"
+                    value="alt"
                     class="text-gray-700 block px-4 py-3 text-sm"
                   >
-                    Select All
+                    ALT
                   </option>
                   <option
-                    value="mw1"
+                    value="albumin"
                     class="text-gray-700 block px-4 py-2 text-sm"
                   >
-                    Profile1
+                    Albumin
                   </option>
                   <option
-                    value="mw2"
+                    value="papsmear"
                     class="text-gray-700 block px-4 py-2 text-sm"
                   >
-                    Profile2
-                  </option>
-                  <option
-                    value="mw3"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Profile3
+                    Papsmear
                   </option>
                 </select>
               </div>
@@ -320,8 +142,7 @@
               <label
                 for="stDate"
                 class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
-              >
-                Date & Time:</label
+                >Order Date:</label
               >
               <input
                 name="daterange"
@@ -330,18 +151,16 @@
                 class="sm:w-60 md:w-80 lg:w-80 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
               />
             </form>
-            <form
-              class="md:w-80 mb-5 col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
+            <form class="md:w-80 mb-5 col-span-2 xl:col-span-2">
               <label
-                for="order"
+                for="mr"
                 class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
-                >Order#:</label
+                >MRN:</label
               >
               <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
                 <select
-                  name="rangeSelectOrder"
-                  class="sm:w-60 lg:w-80 xl:w-80 rangeSelectOrder px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  name="rangeSelect"
+                  class="sm:w-60 lg:w-80 xl:w-80 rangeSelect px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                 >
                   <option
                     value="Like"
@@ -357,11 +176,11 @@
                   </option>
                 </select>
                 <input
-                  id="order"
-                  name="order"
+                  id="mr"
+                  name="mr"
                   type="text"
-                  class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:w-80 lg:ml-0 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                  placeholder="Order#"
+                  class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                  placeholder="MRN"
                 />
               </div>
             </form>
@@ -412,34 +231,55 @@
                 <tr>
                   <td>
                     <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >Section</b
+                      >Total Patients</b
+                    >
+                  </td>
+                  <td>
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5">OPD</b>
+                  </td>
+                  <td>
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >Male</b
                     >
                   </td>
                   <td>
                     <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >Profiles</b
+                      >Female</b
                     >
                   </td>
                   <td>
                     <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >Tests</b
+                      >Ward</b
                     >
+                  </td>
+                  <td>
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5">OPD</b>
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >Chemistry</span
+                      >667</span
                     >
                   </td>
                   <td>
                     <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >12</span
+                      >67</span
                     >
                   </td>
                   <td>
                     <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >40</span
+                      >67</span
+                    >
+                  </td>
+                  <td>
+                    <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >67</span
+                    >
+                  </td>
+                  <td>
+                    <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >67</span
                     >
                   </td>
                 </tr>
@@ -457,78 +297,52 @@
           >
             <thead>
               <tr>
-                <th>Order Completion Status</th>
-                <th>Order#</th>
-                <th>Order Date</th>
-                <th>Lab#</th>
-                <th>Specimen</th>
-                <th>MR#</th>
-                <th>Name</th>
+                <th>Secton</th>
+                <th>Full Amount</th>
+                <th>Discounted Amount</th>
+                <th>Paid Amount</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="hyperlink">
-                  <a href="#">
-                    <span class="bg-green-700 px-3 py-1 rounded-full text-white"
-                      >Completed</span
-                    ></a
-                  >
-                </td>
-                <td>3883929</td>
-                <td>23/11/2023 13:44pm</td>
-                <td>10-29383</td>
-                <td>Blood</td>
-                <td>032023000109</td>
-                <td>Muhammad Amin</td>
+                <td>Chemistry</td>
+                <td>2,345,554</td>
+                <td>345,554</td>
+                <td>45,554</td>
               </tr>
               <tr>
-                <td class="hyperlink">
-                  <a href="#">
-                    <span class="bg-red-700 px-3 py-1 rounded-full text-white"
-                      >Rejected</span
-                    ></a
-                  >
-                </td>
-                <td>3883929</td>
-                <td>23/11/2023 13:44pm</td>
-                <td>10-29383</td>
-                <td>Blood</td>
-                <td>032023000109</td>
-                <td>Muhammad Amin</td>
+                <td>Haemotology</td>
+                <td>2,345,554</td>
+                <td>345,554</td>
+                <td>45,554</td>
               </tr>
               <tr>
-                <td class="hyperlink">
-                  <a href="#">
-                    <span class="bg-blue-700 px-3 py-1 rounded-full text-white"
-                      >Pending</span
-                    ></a
-                  >
-                </td>
-                <td>3883929</td>
-                <td>23/11/2023 13:44pm</td>
-                <td>10-29383</td>
-                <td>Blood</td>
-                <td>032023000109</td>
-                <td>Muhammad Amin</td>
+                <td>Histopathology</td>
+                <td>2,345,554</td>
+                <td>345,554</td>
+                <td>45,554</td>
               </tr>
               <tr>
-                <td class="hyperlink">
-                  <a href="#">
-                    <span
-                      class="bg-yellow-600 px-3 py-1 rounded-full text-white"
-                      >Incomplete</span
-                    ></a
-                  >
-                </td>
-                <td>3883929</td>
-                <td>23/11/2023 13:44pm</td>
-                <td>10-29383</td>
-                <td>Blood</td>
-                <td>032023000109</td>
-                <td>Muhammad Amin</td>
+                <td>Microbiology</td>
+                <td>2,345,554</td>
+                <td>345,554</td>
+                <td>45,554</td>
+              </tr>
+              <tr>
+                <td>Immunology</td>
+                <td>2,345,554</td>
+                <td>345,554</td>
+                <td>45,554</td>
               </tr>
             </tbody>
+            <thead>
+              <tr>
+                <th>Grand Total</th>
+                <th>3,456,322</th>
+                <th>2,335,228</th>
+                <th>45,554</th>
+              </tr>
+            </thead>
           </table>
         </div>
       </div>
@@ -557,12 +371,9 @@
     </script>
     <script type="text/javascript">
       $(function () {
+        $("#enteredBy").multiSelect();
         $("#section").multiSelect();
-        $("#orderEntered").multiSelect();
         $("#test").multiSelect();
-        $("#labEnteredBy").multiSelect();
-        $("#resultEnteredBy").multiSelect();
-        $("#commentEnteredBy").multiSelect();
       });
 
       $("#select_all").click(function () {

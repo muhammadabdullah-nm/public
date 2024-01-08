@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="../input.css" />
     <link
       rel="stylesheet"
@@ -13,10 +12,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/demo-styles.css" />
     <link rel="stylesheet" href="../css/example-styles.css" />
-    <!-- 
-    <link rel="stylesheet" href="datepicker/easepick.skin.blue.css" />
-    <link rel="stylesheet" href="datepicker/easepick.skin.light.css" /> -->
-    <title>Order/Test Time Management</title>
+    <title>Test Order Based on Specimen</title>
   </head>
   <body>
     <div class="sm:p-1 md:p-3 xxl:container p-5 font-sans">
@@ -26,7 +22,7 @@
           <p
             class="sm:font-semibold sm:text-xl md:text-xl text-2xl font-bold underline underline-offset-8 align-middle"
           >
-            Order/Test Time Management
+            Test Order Based on Specimen
           </p>
         </div>
         <!-- Buttons for report type -->
@@ -59,14 +55,60 @@
           </button>
         </div>
       </div>
-
       <!-- Search Box -->
       <div class="bg-blue-300 my-4 p-5 rounded-lg" id="searchBox">
         <div class="gap-3">
           <!-- First Row -->
           <div
-            class="grid grid-rows-1 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
+            class="grid grid-rows-2 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
           >
+            <!--OPD Select Box-->
+            <form
+              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+            >
+              <div class="xl:w-64 xxl:w-64">
+                <label
+                  for="opd"
+                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                  >OPD:</label
+                >
+
+                <select id="opd" name="opd" class="rangeSelect w-72" multiple>
+                  <option
+                    value="selectAll"
+                    class="text-gray-700 block px-4 py-3 text-sm"
+                  >
+                    Select All
+                  </option>
+                  <option
+                    value="d1"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                  >
+                    Antenatal
+                  </option>
+                  <option
+                    value="d2"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                  >
+                    BCC
+                  </option>
+                  <option
+                    value="d3"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                  >
+                    Blood Bank
+                  </option>
+                  <option
+                    value="d4"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                  >
+                    Cardiology
+                  </option>
+                </select>
+              </div>
+            </form>
+
+            <!--Section Box-->
             <form
               class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
             >
@@ -104,19 +146,96 @@
                 </select>
               </div>
             </form>
+
+            <!--Wards Form-->
             <form
               class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
             >
               <div class="xl:w-64 xxl:w-64">
                 <label
-                  for="orderEntered"
+                  for="wards"
                   class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Order Entered By:</label
+                  >Ward:</label
+                >
+
+                <select id="ward" name="ward" class="rangeSelect w-72" multiple>
+                  <option
+                    value="selectAll"
+                    class="text-gray-700 block px-4 py-3 text-sm"
+                  >
+                    Select All
+                  </option>
+                  <option
+                    value="ward1"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                  >
+                    A&E
+                  </option>
+                  <option
+                    value="ward2"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                  >
+                    BCC
+                  </option>
+                  <option
+                    value="ward3"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                  >
+                    BCI
+                  </option>
+                  <option
+                    value="ward4"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                  >
+                    Bone Marrow Transplant
+                  </option>
+                  <option
+                    value="ward5"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                  >
+                    Cardiac Center
+                  </option>
+                  <option
+                    value="ward6"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                  >
+                    Cardiology Ward
+                  </option>
+                  <option
+                    value="ward7"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                  >
+                    CCU
+                  </option>
+                  <option
+                    value="ward8"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                  >
+                    Children Hospital Indoor
+                  </option>
+                  <option
+                    value="ward9"
+                    class="text-gray-700 block px-4 py-2 text-sm"
+                  >
+                    CSI
+                  </option>
+                </select>
+              </div>
+            </form>
+            <!--Specimen Form-->
+            <form
+              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+            >
+              <div class="xl:w-64 xxl:w-64">
+                <label
+                  for="specimen"
+                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                  >Specimen:</label
                 >
 
                 <select
-                  id="orderEntered"
-                  name="orderEntered"
+                  id="specimen"
+                  name="specimen"
                   class="rangeSelect w-72"
                   multiple
                 >
@@ -127,201 +246,28 @@
                     Select All
                   </option>
                   <option
-                    value="first"
+                    value="ascitifluid"
                     class="text-gray-700 block px-4 py-2 text-sm"
                   >
-                    First
+                    Ascitic Fluid
                   </option>
                   <option
-                    value="second"
+                    value="creatinine"
                     class="text-gray-700 block px-4 py-2 text-sm"
                   >
-                    Second
-                  </option>
-                  <option
-                    value="third"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Third
+                    Creatinine Clearance (Serum + Urine)
                   </option>
                 </select>
               </div>
             </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="labEnteredBy"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Lab# Entered By:</label
-                >
-
-                <select
-                  id="labEnteredBy"
-                  name="labEnteredBy"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="first"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    First
-                  </option>
-                  <option
-                    value="second"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Second
-                  </option>
-                  <option
-                    value="third"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Third
-                  </option>
-                </select>
-              </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="resultEnteredBy"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Result Entered By:</label
-                >
-
-                <select
-                  id="resultEnteredBy"
-                  name="resultEnteredBy"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="first"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    First
-                  </option>
-                  <option
-                    value="second"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Second
-                  </option>
-                  <option
-                    value="third"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Third
-                  </option>
-                </select>
-              </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="commentEnteredBy"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Comments Entered By:</label
-                >
-
-                <select
-                  id="commentEnteredBy"
-                  name="commentEnteredBy"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="first"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    First
-                  </option>
-                  <option
-                    value="second"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Second
-                  </option>
-                  <option
-                    value="third"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Third
-                  </option>
-                </select>
-              </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="test"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Test:</label
-                >
-
-                <select id="test" name="test" class="rangeSelect w-72" multiple>
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="mw1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Profile1
-                  </option>
-                  <option
-                    value="mw2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Profile2
-                  </option>
-                  <option
-                    value="mw3"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Profile3
-                  </option>
-                </select>
-              </div>
-            </form>
+            <!--Order Date-->
             <form
               class="mb-5 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
             >
               <label
                 for="stDate"
                 class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
-              >
-                Date & Time:</label
+                >Order Date:</label
               >
               <input
                 name="daterange"
@@ -330,45 +276,9 @@
                 class="sm:w-60 md:w-80 lg:w-80 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
               />
             </form>
-            <form
-              class="md:w-80 mb-5 col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <label
-                for="order"
-                class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
-                >Order#:</label
-              >
-              <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
-                <select
-                  name="rangeSelectOrder"
-                  class="sm:w-60 lg:w-80 xl:w-80 rangeSelectOrder px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                >
-                  <option
-                    value="Like"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Like
-                  </option>
-                  <option
-                    value="Range"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Range
-                  </option>
-                </select>
-                <input
-                  id="order"
-                  name="order"
-                  type="text"
-                  class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:w-80 lg:ml-0 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                  placeholder="Order#"
-                />
-              </div>
-            </form>
           </div>
         </div>
       </div>
-
       <!-- Result Box -->
       <div class="sm:grid flex justify-between mb-7">
         <p
@@ -412,21 +322,31 @@
                 <tr>
                   <td>
                     <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >Date & Time</b
+                    >
+                  </td>
+                  <td>
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
                       >Section</b
                     >
                   </td>
                   <td>
                     <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >Profiles</b
+                      >Specimen</b
                     >
                   </td>
                   <td>
-                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >Tests</b
-                    >
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5">
+                      Total No. of Orders
+                    </b>
                   </td>
                 </tr>
                 <tr>
+                  <td>
+                    <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >23-03-2023 11:30pm</span
+                    >
+                  </td>
                   <td>
                     <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
                       >Chemistry</span
@@ -434,12 +354,12 @@
                   </td>
                   <td>
                     <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >12</span
+                      >Ascitic Fluid</span
                     >
                   </td>
                   <td>
                     <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >40</span
+                      >123</span
                     >
                   </td>
                 </tr>
@@ -457,83 +377,57 @@
           >
             <thead>
               <tr>
-                <th>Order Completion Status</th>
+                <th>MRN</th>
+                <th>Patient Name</th>
                 <th>Order#</th>
-                <th>Order Date</th>
                 <th>Lab#</th>
-                <th>Specimen</th>
-                <th>MR#</th>
-                <th>Name</th>
+                <th>OPD</th>
+                <th>Ward</th>
+                <th>Order Date</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="hyperlink">
-                  <a href="#">
-                    <span class="bg-green-700 px-3 py-1 rounded-full text-white"
-                      >Completed</span
-                    ></a
-                  >
-                </td>
-                <td>3883929</td>
-                <td>23/11/2023 13:44pm</td>
-                <td>10-29383</td>
-                <td>Blood</td>
                 <td>032023000109</td>
-                <td>Muhammad Amin</td>
+                <td>ABDUL KHAN BHADAR</td>
+                <td>10/23-43102</td>
+                <td>0123456</td>
+                <td>General(OPD)</td>
+                <td>Neurology</td>
+                <td>26/10/2023 11:12:17PM</td>
               </tr>
               <tr>
-                <td class="hyperlink">
-                  <a href="#">
-                    <span class="bg-red-700 px-3 py-1 rounded-full text-white"
-                      >Rejected</span
-                    ></a
-                  >
-                </td>
-                <td>3883929</td>
-                <td>23/11/2023 13:44pm</td>
-                <td>10-29383</td>
-                <td>Blood</td>
                 <td>032023000109</td>
-                <td>Muhammad Amin</td>
+                <td>ABDUL KHAN BHADAR</td>
+                <td>10/23-43102</td>
+                <td>0123456</td>
+                <td>General(OPD)</td>
+                <td>Neurology</td>
+                <td>26/10/2023 11:12:17PM</td>
               </tr>
               <tr>
-                <td class="hyperlink">
-                  <a href="#">
-                    <span class="bg-blue-700 px-3 py-1 rounded-full text-white"
-                      >Pending</span
-                    ></a
-                  >
-                </td>
-                <td>3883929</td>
-                <td>23/11/2023 13:44pm</td>
-                <td>10-29383</td>
-                <td>Blood</td>
                 <td>032023000109</td>
-                <td>Muhammad Amin</td>
+                <td>ABDUL KHAN BHADAR</td>
+                <td>10/23-43102</td>
+                <td>0123456</td>
+                <td>General(OPD)</td>
+                <td>Neurology</td>
+                <td>26/10/2023 11:12:17PM</td>
               </tr>
               <tr>
-                <td class="hyperlink">
-                  <a href="#">
-                    <span
-                      class="bg-yellow-600 px-3 py-1 rounded-full text-white"
-                      >Incomplete</span
-                    ></a
-                  >
-                </td>
-                <td>3883929</td>
-                <td>23/11/2023 13:44pm</td>
-                <td>10-29383</td>
-                <td>Blood</td>
                 <td>032023000109</td>
-                <td>Muhammad Amin</td>
+                <td>ABDUL KHAN BHADAR</td>
+                <td>10/23-43102</td>
+                <td>0123456</td>
+                <td>General(OPD)</td>
+                <td>Neurology</td>
+                <td>26/10/2023 11:12:17PM</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
     </div>
-
     <!-- ---------------------FOR DATATABLE ------------------------------- -->
     <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
@@ -558,11 +452,9 @@
     <script type="text/javascript">
       $(function () {
         $("#section").multiSelect();
-        $("#orderEntered").multiSelect();
-        $("#test").multiSelect();
-        $("#labEnteredBy").multiSelect();
-        $("#resultEnteredBy").multiSelect();
-        $("#commentEnteredBy").multiSelect();
+        $("#opd").multiSelect();
+        $("#ward").multiSelect();
+        $("#specimen").multiSelect();
       });
 
       $("#select_all").click(function () {

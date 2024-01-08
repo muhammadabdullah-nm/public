@@ -89,6 +89,7 @@ function report() {
 
 // ---------------------------------RANGE SELECTING ---------------------------
 var mrrangeSelect = $(".rangeSelect");
+var receiptRangeSelect = $(".rangeSelectReceipt");
 var orderRangeSelector = $(".rangeSelectOrder");
 var argeRangeSelector = $(".agerangeSelect");
 var TestRangeSelector = $("#Test");
@@ -112,7 +113,7 @@ mrrangeSelect.on("change", function () {
   }
 });
 
-mrrangeSelect.on("change", function () {
+receiptRangeSelect.on("change", function () {
   var to = $("#fromToReceipt");
   $(this).nextAll("input, label").remove();
   if ($(this).val() === "Range") {
