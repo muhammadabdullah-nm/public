@@ -442,62 +442,6 @@
     <script>
       // $("#example").DataTable({ dom: "lrtip" });
       //new DataTable("#example");
-      $(document).ready(function () {
-        $("#example").DataTable({
-          pageLength: 100,
-          dom: '<"container-fluid"<"row d-flex align-content-center justify-content-center"<"col"l><"col btn btn-sm text-center"B><"col"f>>>rtip',
-          buttons: [
-            {
-              extend: "copy",
-              text: '<i class="text-center bg-orange-400 font-bold px-5 py-2 rounded-lg text-black hover:bg-orange-200"> Copy </i>',
-              titleAttr: "Copy",
-              className: "btn btn-sm btn-primary",
-            },
-            {
-              extend: "excel",
-              text: '<i class="text-center bg-lime-400 font-bold px-5 py-2 rounded-lg text-black hover:bg-lime-200"> Excel </i>',
-              title:
-                '@ViewData["HeadTitle"] of @ViewData["hospital"] From: @ViewData["fromdate"] To: @ViewData["todate"]',
-              titleAttr: "Excel",
-              className: "btn btn-sm btn-success",
-            },
-            {
-              extend: "csv",
-              text: '<i class="text-center bg-teal-400 font-bold px-5 py-2 rounded-lg text-black hover:bg-teal-200"> Csv </i>',
-              title:
-                '@ViewData["HeadTitle"] of @ViewData["hospital"] From: @ViewData["fromdate"] To: @ViewData["todate"]',
-              titleAttr: "Csv",
-              className: "btn btn-sm btn-danger",
-            },
-            {
-              extend: "pdf",
-              text: '<i class="text-center bg-cyan-400 font-bold px-5 py-2 rounded-lg text-black hover:bg-cyan-200"> Pdf </i>',
-              pageSize: "A4",
-              alignment: "center",
-              download: "open",
-              title:
-                '@ViewData["HeadTitle"] of @ViewData["hospital"] From: @ViewData["fromdate"] To: @ViewData["todate"]',
-              titleAttr: "Pdf",
-              className: "btn btn-sm btn-warning",
-              //orientation: 'landscape'
-            },
-            {
-              extend: "print",
-              text: '<i class="text-center bg-emerald-400 font-bold px-5 py-2 rounded-lg text-black hover:bg-emerald-200"> Print </i>',
-              autoPrint: false,
-              title:
-                '<div class="row"><div class="col-2"><img width="60px" height="60px" alt="" title="PIMS" src="/img/pimsLogo.png" /></div> <div class="col-10"><h2>PIMS (Pakistan Institute of Medical Sciences)</h2></div></div>',
-              messageTop:
-                '<hr/> <p class="text-center fs-5 fw-bold">@ViewData["HeadTitle"] of @ViewData["hospital"] From: @ViewData["fromdate"] To: @ViewData["todate"]</p> <hr/>',
-              titleAttr: "Print",
-              className: "btn btn-sm btn-info",
-              messageBottom:
-                '<br/> <br/> <br/> <p class="text-end fs-5 fw-bold">Incharge HMIS </p>',
-              //orientation: 'landscape'
-            },
-          ],
-        });
-      });
     </script>
     <script type="text/javascript">
       $(function () {

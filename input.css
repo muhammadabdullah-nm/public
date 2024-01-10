@@ -956,6 +956,11 @@ video {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(236 72 153 / var(--tw-ring-opacity));
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 @media (min-width: 320px) and (max-width: 480px) {
   .sm\:col-span-2 {
     grid-column: span 2 / span 2;
