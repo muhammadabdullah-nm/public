@@ -64,613 +64,620 @@
       <div class="bg-blue-300 my-4 p-5 rounded-lg" id="searchBox">
         <div class="gap-3">
           <!-- First Row -->
-          <div
-            class="grid grid-rows-3 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
-          >
-            <form class="md:w-80 mb-5 col-span-2 xl:col-span-2">
-              <label
-                for="mr"
-                class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
-                >MRN:</label
-              >
-              <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
-                <select
-                  name="rangeSelect"
-                  class="sm:w-60 lg:w-80 xl:w-80 rangeSelect px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+          <form action="">
+            <div
+              class="grid grid-rows-3 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
+            >
+              <div class="md:w-80 mb-5 col-span-2 xl:col-span-2">
+                <label
+                  for="mr"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
+                  >MRN:</label
                 >
-                  <option
-                    value="Like"
-                    class="text-gray-700 block px-4 py-2 text-sm"
+                <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
+                  <select
+                    name="rangeSelect"
+                    class="sm:w-60 lg:w-80 xl:w-80 rangeSelect px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                   >
-                    Like
-                  </option>
-                  <option
-                    value="Range"
-                    class="text-gray-700 block px-4 py-2 text-sm"
+                    <option
+                      value="Like"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Like
+                    </option>
+                    <option
+                      value="Range"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Range
+                    </option>
+                  </select>
+                  <input
+                    id="mr"
+                    name="mr"
+                    type="text"
+                    class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                    placeholder="MRN"
+                  />
+                </div>
+              </div>
+              <div
+                class="md:w-80 mb-5 col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <label
+                  for="order"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
+                  >Order#:</label
+                >
+                <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
+                  <select
+                    name="rangeSelectOrder"
+                    class="sm:w-60 lg:w-80 xl:w-80 rangeSelectOrder px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                   >
-                    Range
-                  </option>
-                </select>
+                    <option
+                      value="Like"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Like
+                    </option>
+                    <option
+                      value="Range"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Range
+                    </option>
+                  </select>
+                  <input
+                    id="order"
+                    name="order"
+                    type="text"
+                    class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:w-80 lg:ml-0 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                    placeholder="Order#"
+                  />
+                </div>
+              </div>
+              <div
+                class="mb-5 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <label
+                  for="stDate"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
+                >
+                  Date & Time:</label
+                >
                 <input
-                  id="mr"
-                  name="mr"
-                  type="text"
-                  class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                  placeholder="MRN"
+                  name="daterange"
+                  id="daterange"
+                  value="29/08/2023 - 29/08/2023"
+                  class="sm:w-60 md:w-80 lg:w-80 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                 />
               </div>
-            </form>
-            <form
-              class="md:w-80 mb-5 col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <label
-                for="order"
-                class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
-                >Order#:</label
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-              <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
-                <select
-                  name="rangeSelectOrder"
-                  class="sm:w-60 lg:w-80 xl:w-80 rangeSelectOrder px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="department"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Department:</label
+                  >
+
+                  <select
+                    id="department"
+                    name="department"
+                    class="rangeSelect w-72"
+                    multiple
+                  >
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="d1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Dept1
+                    </option>
+                    <option
+                      value="d2"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Dept2
+                    </option>
+                    <option
+                      value="d3"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Dpet3
+                    </option>
+                    <option
+                      value="d4"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Dept4
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="sampleType"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Sample Type:</label
+                  >
+                  <select
+                    id="sampleType"
+                    name="sampleType"
+                    class="rangeSelect w-72"
+                    multiple
+                  >
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="st1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Sample1
+                    </option>
+                    <option
+                      value="st2"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Sample2
+                    </option>
+                    <option
+                      value="st3"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Sample3
+                    </option>
+                    <option
+                      value="st4"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Sample4
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="orderedBy"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Ordered By:</label
+                  >
+
+                  <select
+                    id="orderedBy"
+                    name="orderedBy"
+                    class="rangeSelect w-72"
+                    multiple
+                  >
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="dr1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Dcotor 1
+                    </option>
+                    <option
+                      value="dr2"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Doctor2
+                    </option>
+                    <option
+                      value="dr3"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Doctor3
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <label
+                  for="name"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
+                  >Name:</label
                 >
-                  <option
-                    value="Like"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Like
-                  </option>
-                  <option
-                    value="Range"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Range
-                  </option>
-                </select>
                 <input
-                  id="order"
-                  name="order"
+                  id="name"
+                  name="name"
                   type="text"
-                  class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:w-80 lg:ml-0 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                  placeholder="Order#"
+                  class="sm:w-60 md:w-80 lg:w-80 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                  placeholder="Name"
                 />
               </div>
-            </form>
-            <form
-              class="mb-5 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <label
-                for="stDate"
-                class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-                Date & Time:</label
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="ward"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Ward/OPD:</label
+                  >
+
+                  <select
+                    id="ward"
+                    name="ward"
+                    class="rangeSelect w-72"
+                    multiple
+                  >
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="mw1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Medical Ward1
+                    </option>
+                    <option
+                      value="mw2"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Medical Ward2
+                    </option>
+                    <option
+                      value="mw3"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Medical Ward3
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-              <input
-                name="daterange"
-                id="daterange"
-                value="29/08/2023 - 29/08/2023"
-                class="sm:w-60 md:w-80 lg:w-80 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-              />
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="department"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Department:</label
-                >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="profileTest"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Profile/Test:</label
+                  >
 
-                <select
-                  id="department"
-                  name="department"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
+                  <select
+                    id="profileTest"
+                    name="profileTest"
+                    class="rangeSelect w-72"
+                    multiple
                   >
-                    Select All
-                  </option>
-                  <option
-                    value="d1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Dept1
-                  </option>
-                  <option
-                    value="d2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Dept2
-                  </option>
-                  <option
-                    value="d3"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Dpet3
-                  </option>
-                  <option
-                    value="d4"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Dept4
-                  </option>
-                </select>
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="mw1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Profile1
+                    </option>
+                    <option
+                      value="mw2"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Profile2
+                    </option>
+                    <option
+                      value="mw3"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Profile3
+                    </option>
+                  </select>
+                </div>
               </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="sampleType"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Sample Type:</label
-                >
-                <select
-                  id="sampleType"
-                  name="sampleType"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="st1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Sample1
-                  </option>
-                  <option
-                    value="st2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Sample2
-                  </option>
-                  <option
-                    value="st3"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Sample3
-                  </option>
-                  <option
-                    value="st4"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Sample4
-                  </option>
-                </select>
-              </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="orderedBy"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Ordered By:</label
-                >
-
-                <select
-                  id="orderedBy"
-                  name="orderedBy"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="dr1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Dcotor 1
-                  </option>
-                  <option
-                    value="dr2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Doctor2
-                  </option>
-                  <option
-                    value="dr3"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Doctor3
-                  </option>
-                </select>
-              </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <label
-                for="name"
-                class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
-                >Name:</label
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-              <input
-                id="name"
-                name="name"
-                type="text"
-                class="sm:w-60 md:w-80 lg:w-80 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                placeholder="Name"
-              />
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="ward"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Ward/OPD:</label
-                >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="labNo"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Lab Number Entered By:</label
+                  >
 
-                <select id="ward" name="ward" class="rangeSelect w-72" multiple>
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
+                  <select
+                    id="labNo"
+                    name="labNo"
+                    class="rangeSelect w-72"
+                    multiple
                   >
-                    Select All
-                  </option>
-                  <option
-                    value="mw1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Medical Ward1
-                  </option>
-                  <option
-                    value="mw2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Medical Ward2
-                  </option>
-                  <option
-                    value="mw3"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Medical Ward3
-                  </option>
-                </select>
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="l1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Lab1
+                    </option>
+                    <option
+                      value="l2"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Lab2
+                    </option>
+                    <option
+                      value="l3"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Lab3
+                    </option>
+                  </select>
+                </div>
               </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="profileTest"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Profile/Test:</label
-                >
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="diagnosis"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Diagnosis:</label
+                  >
 
-                <select
-                  id="profileTest"
-                  name="profileTest"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
+                  <select
+                    id="diagnosis"
+                    name="diagnosis"
+                    class="rangeSelect w-72"
+                    multiple
                   >
-                    Select All
-                  </option>
-                  <option
-                    value="mw1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Profile1
-                  </option>
-                  <option
-                    value="mw2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Profile2
-                  </option>
-                  <option
-                    value="mw3"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Profile3
-                  </option>
-                </select>
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="l1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Diagnosis1
+                    </option>
+                    <option
+                      value="l2"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Diagnosis12
+                    </option>
+                    <option
+                      value="l3"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Diagnosis13
+                    </option>
+                  </select>
+                </div>
               </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="labNo"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Lab Number Entered By:</label
-                >
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="resultWise"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Result Wise:</label
+                  >
 
-                <select
-                  id="labNo"
-                  name="labNo"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
+                  <select
+                    id="resultWise"
+                    name="resultWise"
+                    class="rangeSelect w-72"
+                    multiple
                   >
-                    Select All
-                  </option>
-                  <option
-                    value="l1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Lab1
-                  </option>
-                  <option
-                    value="l2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Lab2
-                  </option>
-                  <option
-                    value="l3"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Lab3
-                  </option>
-                </select>
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="positive"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Positive
+                    </option>
+                    <option
+                      value="negative"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Negative
+                    </option>
+                    <option
+                      value="indeterminate"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Indeterminate
+                    </option>
+                    <option
+                      value="repeat"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Repeat
+                    </option>
+                  </select>
+                </div>
               </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="diagnosis"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Diagnosis:</label
-                >
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="reportCompletionStatus"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Report Completion Statuswise:</label
+                  >
 
-                <select
-                  id="diagnosis"
-                  name="diagnosis"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
+                  <select
+                    id="reportCompletionStatus"
+                    name="reportCompletionStatus"
+                    class="rangeSelect w-72"
+                    multiple
                   >
-                    Select All
-                  </option>
-                  <option
-                    value="l1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Diagnosis1
-                  </option>
-                  <option
-                    value="l2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Diagnosis12
-                  </option>
-                  <option
-                    value="l3"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Diagnosis13
-                  </option>
-                </select>
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="complete"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Complete
+                    </option>
+                    <option
+                      value="incomplete"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Incomplete
+                    </option>
+                    <option
+                      value="pending"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Pending
+                    </option>
+                    <option
+                      value="rejected"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Rejected
+                    </option>
+                  </select>
+                </div>
               </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="resultWise"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Result Wise:</label
-                >
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="resultEnteredBy"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Result Entered By:</label
+                  >
 
-                <select
-                  id="resultWise"
-                  name="resultWise"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
+                  <select
+                    id="resultEnteredBy"
+                    name="resultEnteredBy"
+                    class="rangeSelect w-72"
+                    multiple
                   >
-                    Select All
-                  </option>
-                  <option
-                    value="positive"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Positive
-                  </option>
-                  <option
-                    value="negative"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Negative
-                  </option>
-                  <option
-                    value="indeterminate"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Indeterminate
-                  </option>
-                  <option
-                    value="repeat"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Repeat
-                  </option>
-                </select>
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="dr1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Doctor1
+                    </option>
+                    <option
+                      value="dr1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Doctor1
+                    </option>
+                    <option
+                      value="dr1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Doctor1
+                    </option>
+                    <option
+                      value="dr1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Doctor1
+                    </option>
+                  </select>
+                </div>
               </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="reportCompletionStatus"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Report Completion Statuswise:</label
-                >
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="commentedBy"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Commented By:</label
+                  >
 
-                <select
-                  id="reportCompletionStatus"
-                  name="reportCompletionStatus"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
+                  <select
+                    id="commentedBy"
+                    name="commentedBy"
+                    class="rangeSelect w-72"
+                    multiple
                   >
-                    Select All
-                  </option>
-                  <option
-                    value="complete"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Complete
-                  </option>
-                  <option
-                    value="incomplete"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Incomplete
-                  </option>
-                  <option
-                    value="pending"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Pending
-                  </option>
-                  <option
-                    value="rejected"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Rejected
-                  </option>
-                </select>
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="dr1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Doctor1
+                    </option>
+                    <option
+                      value="dr1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Doctor1
+                    </option>
+                    <option
+                      value="dr1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Doctor1
+                    </option>
+                    <option
+                      value="dr1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Doctor1
+                    </option>
+                  </select>
+                </div>
               </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="resultEnteredBy"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Result Entered By:</label
-                >
-
-                <select
-                  id="resultEnteredBy"
-                  name="resultEnteredBy"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="dr1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Doctor1
-                  </option>
-                  <option
-                    value="dr1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Doctor1
-                  </option>
-                  <option
-                    value="dr1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Doctor1
-                  </option>
-                  <option
-                    value="dr1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Doctor1
-                  </option>
-                </select>
-              </div>
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="commentedBy"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Commented By:</label
-                >
-
-                <select
-                  id="commentedBy"
-                  name="commentedBy"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="dr1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Doctor1
-                  </option>
-                  <option
-                    value="dr1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Doctor1
-                  </option>
-                  <option
-                    value="dr1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Doctor1
-                  </option>
-                  <option
-                    value="dr1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Doctor1
-                  </option>
-                </select>
-              </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
 

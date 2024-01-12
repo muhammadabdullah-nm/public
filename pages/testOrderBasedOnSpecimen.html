@@ -59,224 +59,231 @@
       <div class="bg-blue-300 my-4 p-5 rounded-lg" id="searchBox">
         <div class="gap-3">
           <!-- First Row -->
-          <div
-            class="grid grid-rows-2 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
-          >
-            <!--OPD Select Box-->
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+          <form action="">
+            <div
+              class="grid grid-rows-2 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
             >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="opd"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >OPD:</label
-                >
-
-                <select id="opd" name="opd" class="rangeSelect w-72" multiple>
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="d1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Antenatal
-                  </option>
-                  <option
-                    value="d2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    BCC
-                  </option>
-                  <option
-                    value="d3"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Blood Bank
-                  </option>
-                  <option
-                    value="d4"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Cardiology
-                  </option>
-                </select>
-              </div>
-            </form>
-
-            <!--Section Box-->
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="section"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Section:</label
-                >
-
-                <select
-                  id="section"
-                  name="section"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="section1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Section1
-                  </option>
-                  <option
-                    value="section2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Section2
-                  </option>
-                </select>
-              </div>
-            </form>
-
-            <!--Wards Form-->
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="wards"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Ward:</label
-                >
-
-                <select id="ward" name="ward" class="rangeSelect w-72" multiple>
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="ward1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    A&E
-                  </option>
-                  <option
-                    value="ward2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    BCC
-                  </option>
-                  <option
-                    value="ward3"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    BCI
-                  </option>
-                  <option
-                    value="ward4"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Bone Marrow Transplant
-                  </option>
-                  <option
-                    value="ward5"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Cardiac Center
-                  </option>
-                  <option
-                    value="ward6"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Cardiology Ward
-                  </option>
-                  <option
-                    value="ward7"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    CCU
-                  </option>
-                  <option
-                    value="ward8"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Children Hospital Indoor
-                  </option>
-                  <option
-                    value="ward9"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    CSI
-                  </option>
-                </select>
-              </div>
-            </form>
-            <!--Specimen Form-->
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="specimen"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Specimen:</label
-                >
-
-                <select
-                  id="specimen"
-                  name="specimen"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="ascitifluid"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Ascitic Fluid
-                  </option>
-                  <option
-                    value="creatinine"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Creatinine Clearance (Serum + Urine)
-                  </option>
-                </select>
-              </div>
-            </form>
-            <!--Order Date-->
-            <form
-              class="mb-5 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <label
-                for="stDate"
-                class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
-                >Order Date:</label
+              <!--OPD Select Box-->
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-              <input
-                name="daterange"
-                id="daterange"
-                value="29/08/2023 - 29/08/2023"
-                class="sm:w-60 md:w-80 lg:w-80 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-              />
-            </form>
-          </div>
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="opd"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >OPD:</label
+                  >
+
+                  <select id="opd" name="opd" class="rangeSelect w-72" multiple>
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="d1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Antenatal
+                    </option>
+                    <option
+                      value="d2"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      BCC
+                    </option>
+                    <option
+                      value="d3"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Blood Bank
+                    </option>
+                    <option
+                      value="d4"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Cardiology
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <!--Section Box-->
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="section"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Section:</label
+                  >
+
+                  <select
+                    id="section"
+                    name="section"
+                    class="rangeSelect w-72"
+                    multiple
+                  >
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="section1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Section1
+                    </option>
+                    <option
+                      value="section2"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Section2
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <!--Wards Form-->
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="wards"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Ward:</label
+                  >
+
+                  <select
+                    id="ward"
+                    name="ward"
+                    class="rangeSelect w-72"
+                    multiple
+                  >
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="ward1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      A&E
+                    </option>
+                    <option
+                      value="ward2"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      BCC
+                    </option>
+                    <option
+                      value="ward3"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      BCI
+                    </option>
+                    <option
+                      value="ward4"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Bone Marrow Transplant
+                    </option>
+                    <option
+                      value="ward5"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Cardiac Center
+                    </option>
+                    <option
+                      value="ward6"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Cardiology Ward
+                    </option>
+                    <option
+                      value="ward7"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      CCU
+                    </option>
+                    <option
+                      value="ward8"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Children Hospital Indoor
+                    </option>
+                    <option
+                      value="ward9"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      CSI
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <!--Specimen Form-->
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="specimen"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Specimen:</label
+                  >
+
+                  <select
+                    id="specimen"
+                    name="specimen"
+                    class="rangeSelect w-72"
+                    multiple
+                  >
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="ascitifluid"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Ascitic Fluid
+                    </option>
+                    <option
+                      value="creatinine"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Creatinine Clearance (Serum + Urine)
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <!--Order Date-->
+              <div
+                class="mb-5 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <label
+                  for="stDate"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
+                  >Order Date:</label
+                >
+                <input
+                  name="daterange"
+                  id="daterange"
+                  value="29/08/2023 - 29/08/2023"
+                  class="sm:w-60 md:w-80 lg:w-80 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                />
+              </div>
+            </div>
+          </form>
         </div>
       </div>
       <!-- Result Box -->

@@ -59,48 +59,49 @@
       <div class="bg-blue-300 my-4 p-5 rounded-lg" id="searchBox">
         <div class="gap-3">
           <!-- First Row -->
-          <div
-            class="grid grid-rows-1 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
-          >
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+          <form action="">
+            <div
+              class="grid grid-rows-1 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
             >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="reportOf"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Report Of:
-                </label>
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="reportOf"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Report Of:
+                  </label>
 
-                <select
-                  id="reportOf"
-                  name="reportOf"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
+                  <select
+                    id="reportOf"
+                    name="reportOf"
+                    class="rangeSelect w-72"
+                    multiple
                   >
-                    Select All
-                  </option>
-                  <option
-                    value="d1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Test Discounts List
-                  </option>
-                  <option
-                    value="d2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Profile Discounts List
-                  </option>
-                </select>
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="d1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Test Discounts List
+                    </option>
+                    <option
+                      value="d2"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Profile Discounts List
+                    </option>
+                  </select>
+                </div>
               </div>
-            </form>
 
-            <!--
+              <!--
             <form
               class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
             >
@@ -230,7 +231,8 @@
               />
             </form>
 -->
-          </div>
+            </div>
+          </form>
         </div>
       </div>
       <!-- Result Box -->

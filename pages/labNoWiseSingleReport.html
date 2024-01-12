@@ -64,10 +64,11 @@
       <div class="bg-blue-300 my-4 p-5 rounded-lg" id="searchBox">
         <div class="gap-3">
           <!-- First Row -->
-          <div
-            class="grid grid-rows-3 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
-          >
-            <!-- 
+          <form action="">
+            <div
+              class="grid grid-rows-3 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
+            >
+              <!-- 
             <form
               class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
             >
@@ -275,23 +276,23 @@
               />
             </form>
 -->
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <label
-                for="cnic"
-                class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
-                >CNIC:</label
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-              <input
-                id="cnic"
-                name="cnic"
-                type="number"
-                class="sm:w-60 md:w-80 lg:w-80 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                placeholder="CNIC"
-              />
-            </form>
-            <!-- 
+                <label
+                  for="cnic"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
+                  >CNIC:</label
+                >
+                <input
+                  id="cnic"
+                  name="cnic"
+                  type="number"
+                  class="sm:w-60 md:w-80 lg:w-80 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                  placeholder="CNIC"
+                />
+              </div>
+              <!-- 
             <form
               class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
             >
@@ -377,107 +378,108 @@
               />
             </form> 
 -->
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <label
-                for="sampleNo"
-                class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
-                >Sample#:</label
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-              <input
-                id="sampleNo"
-                name="sampleNo"
-                type="number"
-                class="sm:w-60 md:w-80 lg:w-80 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                placeholder="Sample No."
-              />
-            </form>
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <label
-                for="visitNo"
-                class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
-                >Visit#:</label
-              >
-              <input
-                id="visitNo"
-                name="visitNo"
-                type="number"
-                class="sm:w-60 md:w-80 lg:w-80 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                placeholder="Visit No."
-              />
-            </form>
-            <form class="md:w-80 mb-5 col-span-2 xl:col-span-2">
-              <label
-                for="mr"
-                class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
-                >MRN:</label
-              >
-              <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
-                <select
-                  name="rangeSelect"
-                  class="sm:w-60 lg:w-80 xl:w-80 rangeSelect px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                <label
+                  for="sampleNo"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
+                  >Sample#:</label
                 >
-                  <option
-                    value="Like"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Like
-                  </option>
-                  <option
-                    value="Range"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Range
-                  </option>
-                </select>
                 <input
-                  id="mr"
-                  name="mr"
-                  type="text"
-                  class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                  placeholder="MRN"
+                  id="sampleNo"
+                  name="sampleNo"
+                  type="number"
+                  class="sm:w-60 md:w-80 lg:w-80 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                  placeholder="Sample No."
                 />
               </div>
-            </form>
-            <form
-              class="md:w-80 mb-5 col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <label
-                for="order"
-                class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
-                >Order#:</label
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-              <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
-                <select
-                  name="rangeSelectOrder"
-                  class="sm:w-60 lg:w-80 xl:w-80 rangeSelectOrder px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                <label
+                  for="visitNo"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
+                  >Visit#:</label
                 >
-                  <option
-                    value="Like"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Like
-                  </option>
-                  <option
-                    value="Range"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Range
-                  </option>
-                </select>
                 <input
-                  id="order"
-                  name="order"
-                  type="text"
-                  class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:w-80 lg:ml-0 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                  placeholder="Order#"
+                  id="visitNo"
+                  name="visitNo"
+                  type="number"
+                  class="sm:w-60 md:w-80 lg:w-80 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                  placeholder="Visit No."
                 />
               </div>
-            </form>
-          </div>
+              <div class="md:w-80 mb-5 col-span-2 xl:col-span-2">
+                <label
+                  for="mr"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
+                  >MRN:</label
+                >
+                <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
+                  <select
+                    name="rangeSelect"
+                    class="sm:w-60 lg:w-80 xl:w-80 rangeSelect px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  >
+                    <option
+                      value="Like"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Like
+                    </option>
+                    <option
+                      value="Range"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Range
+                    </option>
+                  </select>
+                  <input
+                    id="mr"
+                    name="mr"
+                    type="text"
+                    class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                    placeholder="MRN"
+                  />
+                </div>
+              </div>
+              <div
+                class="md:w-80 mb-5 col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <label
+                  for="order"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
+                  >Order#:</label
+                >
+                <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
+                  <select
+                    name="rangeSelectOrder"
+                    class="sm:w-60 lg:w-80 xl:w-80 rangeSelectOrder px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  >
+                    <option
+                      value="Like"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Like
+                    </option>
+                    <option
+                      value="Range"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Range
+                    </option>
+                  </select>
+                  <input
+                    id="order"
+                    name="order"
+                    type="text"
+                    class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:w-80 lg:ml-0 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                    placeholder="Order#"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
 

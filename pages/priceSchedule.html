@@ -64,137 +64,144 @@
       <div class="bg-blue-300 my-4 p-5 rounded-lg" id="searchBox">
         <div class="gap-3">
           <!-- First Row -->
-          <div
-            class="grid grid-rows-1 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
-          >
-            <!--Payment Type Wise Form-->
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+          <form action="">
+            <div
+              class="grid grid-rows-1 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
             >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="paymentType"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Patient Type:</label
-                >
-                <select
-                  id="paymentType"
-                  name="paymentType"
-                  class="rangeSelect w-72"
-                  multiple
-                >
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
+              <!--Payment Type Wise Form-->
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="paymentType"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Patient Type:</label
                   >
-                    Select All
-                  </option>
-                  <option
-                    value="poor"
-                    class="text-gray-700 block px-4 py-2 text-sm"
+                  <select
+                    id="paymentType"
+                    name="paymentType"
+                    class="rangeSelect w-72"
+                    multiple
                   >
-                    Poor
-                  </option>
-                  <option
-                    value="staff"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    PIMS Staff
-                  </option>
-                  <option
-                    value="entitled"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Entitled
-                  </option>
-                  <option
-                    value="general"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    General
-                  </option>
-                </select>
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="poor"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Poor
+                    </option>
+                    <option
+                      value="staff"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      PIMS Staff
+                    </option>
+                    <option
+                      value="entitled"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Entitled
+                    </option>
+                    <option
+                      value="general"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      General
+                    </option>
+                  </select>
+                </div>
               </div>
-            </form>
-            <!--Ward Form-->
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="ward"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >Ward:</label
-                >
+              <!--Ward Form-->
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="ward"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Ward:</label
+                  >
 
-                <select id="ward" name="ward" class="rangeSelect w-72" multiple>
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
+                  <select
+                    id="ward"
+                    name="ward"
+                    class="rangeSelect w-72"
+                    multiple
                   >
-                    Select All
-                  </option>
-                  <option
-                    value="mw1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Medical Ward1
-                  </option>
-                  <option
-                    value="mw2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Medical Ward2
-                  </option>
-                  <option
-                    value="mw3"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Medical Ward3
-                  </option>
-                </select>
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="mw1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Medical Ward1
+                    </option>
+                    <option
+                      value="mw2"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Medical Ward2
+                    </option>
+                    <option
+                      value="mw3"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Medical Ward3
+                    </option>
+                  </select>
+                </div>
               </div>
-            </form>
-            <!--OPD Form-->
-            <form
-              class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-            >
-              <div class="xl:w-64 xxl:w-64">
-                <label
-                  for="opd"
-                  class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                  >OPD:</label
-                >
+              <!--OPD Form-->
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="opd"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >OPD:</label
+                  >
 
-                <select id="opd" name="opd" class="rangeSelect w-72" multiple>
-                  <option
-                    value="selectAll"
-                    class="text-gray-700 block px-4 py-3 text-sm"
-                  >
-                    Select All
-                  </option>
-                  <option
-                    value="mw1"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Medical Ward1
-                  </option>
-                  <option
-                    value="mw2"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Medical Ward2
-                  </option>
-                  <option
-                    value="mw3"
-                    class="text-gray-700 block px-4 py-2 text-sm"
-                  >
-                    Medical Ward3
-                  </option>
-                </select>
+                  <select id="opd" name="opd" class="rangeSelect w-72" multiple>
+                    <option
+                      value="selectAll"
+                      class="text-gray-700 block px-4 py-3 text-sm"
+                    >
+                      Select All
+                    </option>
+                    <option
+                      value="mw1"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Medical Ward1
+                    </option>
+                    <option
+                      value="mw2"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Medical Ward2
+                    </option>
+                    <option
+                      value="mw3"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Medical Ward3
+                    </option>
+                  </select>
+                </div>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
 
