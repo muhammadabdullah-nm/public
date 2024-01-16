@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="../input.css" />
+    <link rel="stylesheet" href="../output.css" />
+    
+
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap4.min.css"
@@ -18,8 +21,198 @@
     <link rel="stylesheet" href="datepicker/easepick.skin.light.css" /> -->
     <title>Costing</title>
   </head>
-  <body>
+  <body class="my-0 py-0">
+    <div class="bg-slate-100 border-b shadow-sm p-1">
+      <nav class="container mx-auto flex items-center justify-around ">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img src="logoPims.png" alt="Logo" class="h-16 w-16 mr-2" />
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="flex space-x-8">
+          <a href="#" class="text-black">Home</a>
+
+          <!-- Generic Search Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Generic Search
+              <svg
+                class="h-4 w-4 inline-block ml-1 "
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-44"
+            >
+              <ul>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Revenue Reports Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Revenue Reports
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-44"
+            >
+              <ul>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Authority Files Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Authority Files
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-44"
+            >
+              <ul>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tests Progress / Test Trend Graphs Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Tests Progress
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-44"
+            >
+              <ul>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Patient Reports -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Patient Reports
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-44"
+            >
+              <ul>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Item 1</li></a>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Lab Reports Dropdown -->
+
+          <!-- Repeat the above structure for other dropdowns -->
+
+          <!-- General Reports Dropdown -->
+        </div>
+      </nav>
+    </div>
     <div class="sm:p-1 md:p-3 xxl:container p-5 font-sans">
+      
       <!-- Heading -->
       <div class="sm:grid md:grid flex justify-between">
         <div class="sm:mb-4 sm:text-center md:text-center md:mb-4">
@@ -607,6 +800,33 @@
           var dateRange1 = $("#daterange1").val();
           location.href = "../Home/dashboard_c?forDatePeriod=" + dateRange1;
           //instead call all ajax calls independently
+        });
+      });
+    </script>
+    <!-- ---------------------FOR NAVBAR ------------------------------- -->
+    <script>
+      // JavaScript for Dropdowns
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all elements with class 'group'
+        const dropdowns = document.querySelectorAll(".group");
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", function (event) {
+          dropdowns.forEach((dropdown) => {
+            if (!dropdown.contains(event.target)) {
+              dropdown.querySelector(".absolute").classList.add("hidden");
+            }
+          });
+        });
+
+        // Toggle dropdown on button click
+        dropdowns.forEach((dropdown) => {
+          const button = dropdown.querySelector("button");
+          const menu = dropdown.querySelector(".absolute");
+
+          button.addEventListener("click", function () {
+            menu.classList.toggle("hidden");
+          });
         });
       });
     </script>
