@@ -6,6 +6,8 @@
 
     <link rel="stylesheet" href="../input.css" />
     <link rel="stylesheet" href="../output.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
     
 
     <link
@@ -21,9 +23,9 @@
     <link rel="stylesheet" href="datepicker/easepick.skin.light.css" /> -->
     <title>Costing</title>
   </head>
-  <body class="my-0 py-0">
+  <body class="my-0 py-0 bg-white">
     <div class="bg-slate-100 border-b shadow-sm p-1">
-      <nav class="container mx-auto flex items-center justify-around ">
+      <nav class="container mx-auto flex flex-row items-center justify-between bg-white ">
         <!-- Logo -->
         <div class="flex items-center">
           <img src="logoPims.png" alt="Logo" class="h-16 w-16 mr-2" />
@@ -31,7 +33,7 @@
 
         <!-- Navigation Links -->
         <div class="flex space-x-8">
-          <a href="#" class="text-black">Home</a>
+          <a href="../index.html" class="text-black">Home</a>
 
           <!-- Generic Search Dropdown -->
           <div class="relative group">
@@ -214,17 +216,17 @@
     <div class="sm:p-1 md:p-3 xxl:container p-5 font-sans">
       
       <!-- Heading -->
-      <div class="sm:grid md:grid flex justify-between">
-        <div class="sm:mb-4 sm:text-center md:text-center md:mb-4">
+      <div class=" flex flex-row justify-between my-3">
+        <div class="sm:mb-4 sm:text-left md:text-center md:my-2">
           <p
-            class="sm:font-semibold sm:text-xl md:text-xl text-2xl font-bold underline underline-offset-8 align-middle"
+            class="sm:font-semibold sm:text-xl mb-2 md:text-xl ml-12 text-2xl font-bold underline underline-offset-8 align-middle"
           >
             Costing
           </p>
         </div>
         <!-- Buttons for report type -->
         <div
-          class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-4 flex justify-center"
+          class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-4  justify-between"
         >
           <button
             class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-red-500 p-3 mx-2 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
@@ -267,10 +269,9 @@
                 <div class="xl:w-64 xxl:w-64">
                   <label
                     for="section"
-                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Section:</label
-                  >
-
+                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Section:
+                  </label>
                   <select
                     id="section"
                     name="section"
@@ -304,9 +305,9 @@
                 <div class="xl:w-64 xxl:w-64">
                   <label
                     for="paymentType"
-                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Payment Type:</label
-                  >
+                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Payment Type:
+                  </label>
                   <select
                     id="paymentType"
                     name="paymentType"
@@ -352,10 +353,9 @@
                 <div class="xl:w-64 xxl:w-64">
                   <label
                     for="test"
-                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Test:</label
-                  >
-
+                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Test:
+                  </label>
                   <select
                     id="test"
                     name="test"
@@ -396,9 +396,8 @@
                   <label
                     for="profile"
                     class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Profile:</label
-                  >
-
+                    >Profile:
+                  </label>
                   <select
                     id="profile"
                     name="profile"
@@ -506,7 +505,7 @@
       <!-- Result Box -->
       <div class="sm:grid flex justify-between mb-7">
         <p
-          class="sm:text-lg sm:mb-5 font-semibold text-2xl underline underline-offset-8 align-middle"
+          class="sm:text-lg sm:mb-5 mt-2 font-semibold text-2xl underline underline-offset-8 align-middle"
         >
           Results
         </p>
@@ -592,7 +591,7 @@
             <thead>
               <tr>
                 <th colspan="7">
-                  <div class="flex justify-between text-black font-medium">
+                  <div class="flex justify-between text-white font-medium text-lg">
                     <span>Entitled (Payment Type)</span>
                   </div>
                 </th>
