@@ -6,9 +6,10 @@
 
     <link rel="stylesheet" href="../input.css" />
     <link rel="stylesheet" href="../output.css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-    
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    /> -->
 
     <link
       rel="stylesheet"
@@ -23,12 +24,16 @@
     <link rel="stylesheet" href="datepicker/easepick.skin.light.css" /> -->
     <title>Costing</title>
   </head>
-  <body class="my-0 py-0 bg-white">
+  <body class="mt-0 pt-0 bg-white">
     <div class="bg-slate-100 border-b shadow-sm p-1">
-      <nav class="container mx-auto flex flex-row items-center justify-between bg-white ">
+      <nav
+        class="container mx-auto flex flex-row items-center justify-between bg-white px-5"
+      >
         <!-- Logo -->
         <div class="flex items-center">
-         <a href="../index.html"> <img src="logoPims.png" alt="Logo" class="h-16 w-16 mr-2" /></a>
+          <a href="../index.html">
+            <img src="logoPims.png" alt="Logo" class="h-16 w-16 mr-2"
+          /></a>
         </div>
 
         <!-- Navigation Links -->
@@ -42,7 +47,7 @@
             >
               Generic Search
               <svg
-                class="h-4 w-4 inline-block ml-1 "
+                class="h-4 w-4 inline-block ml-1"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -214,9 +219,8 @@
       </nav>
     </div>
     <div class="sm:p-1 md:p-3 xxl:container p-5 font-sans">
-      
       <!-- Heading -->
-      <div class=" flex flex-row justify-between my-3">
+      <div class="flex flex-row justify-between my-3">
         <div class="sm:mb-4 sm:text-left md:text-center md:my-2">
           <p
             class="sm:font-semibold sm:text-xl mb-2 md:text-xl ml-12 text-2xl font-bold underline underline-offset-8 align-middle"
@@ -226,7 +230,7 @@
         </div>
         <!-- Buttons for report type -->
         <div
-          class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-4  justify-between"
+          class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-4 justify-between"
         >
           <button
             class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-red-500 p-3 mx-2 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
@@ -261,7 +265,7 @@
           <!-- First Row -->
           <form>
             <div
-              class="grid grid-rows-1 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
+              class="grid grid-rows-4 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
             >
               <div
                 class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
@@ -591,7 +595,9 @@
             <thead>
               <tr>
                 <th colspan="7">
-                  <div class="flex justify-between text-white font-medium text-lg">
+                  <div
+                    class="flex justify-between text-white font-medium text-lg"
+                  >
                     <span>Entitled (Payment Type)</span>
                   </div>
                 </th>
