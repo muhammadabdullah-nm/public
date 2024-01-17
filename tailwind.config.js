@@ -21,6 +21,8 @@ module.exports = {
 
       xxxl: { min: "1481px", max: "1600px" },
       // => @media (min-width: 1281px) { ... }
+       
+      xxxxl: { min: "1600px", max: "1800px" },
     },
   },
   plugins: [],
