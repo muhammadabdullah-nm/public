@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="../input.css" />
+    <link rel="stylesheet" href="../output.css" />
+
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap4.min.css"
@@ -18,7 +20,223 @@
     <link rel="stylesheet" href="datepicker/easepick.skin.light.css" /> -->
     <title>Order Status Based on Test</title>
   </head>
-  <body>
+  <body class="mt-0 pt-0 bg-white">
+    <div class="bg-slate-100 border-b shadow-sm p-1">
+      <nav
+        class="flex flex-row items-center justify-between bg-white px-5"
+      >
+        <!-- Logo -->
+        
+          <div class=" items-center ">
+            <a href="../index.html">
+              <img src="logoPims.png" alt="Logo" class="h-16 w-16 mr-2"/>
+            </a>
+          </div>
+
+        <!-- Navigation Links -->
+        <div class="flex space-x-8">
+          <a href="../index.html" class="text-black">Home</a>
+
+          <!-- Generic Search Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Generic Search
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+               >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7">
+                </path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-56"
+            >
+              <ul>
+                <a href="./patSearch.html"><li class="p-1 hover:bg-gray-100">Patient Search</li></a>
+                <a href="./testProfiles.html"><li class="p-1 hover:bg-gray-100">Test and Profiles</li></a>
+                <a href="./QCGraph.html"><li class="p-1 hover:bg-gray-100">Q.C. Graph</li></a>
+                <a href="./statisticsReport.html"><li class="p-1 hover:bg-gray-100">Statistic Report</li></a>
+                <a href="./testConsumptionReport.html"><li class="p-1 hover:bg-gray-100">Test Consumption Report</li></a>
+                <a href="./outOfRangeReport.html"><li class="p-1 hover:bg-gray-100">Out of Range Test Report</li></a>
+                <a href="./orderTrackingCompletedResults.html"><li class="p-1 hover:bg-gray-100">Order Tracking/Completed Results for Ward/OPD</li></a>
+                <a href="./orderTestsTimeManagement.html"><li class="p-1 hover:bg-gray-100">Order/Tests Time Management</li></a>
+                <a href="./testCompletion.html"><li class="p-1 hover:bg-gray-100">Test Completion Report</li></a>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Revenue Reports Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+              >
+              Revenue Reports
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+               >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+             <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-56"
+            >
+              <ul>
+                <a href="./userWiseRevenueReport.html"><li class="p-1 hover:bg-gray-100">User Wise Revenue Report</li></a>
+                <a href="./priceSchedule.html"><li class="p-1 hover:bg-gray-100">Price Schedule</li></a>
+                <a href="./testWiseRevenue.html"><li class="p-1 hover:bg-gray-100">Tests Wise Revenue</li></a>
+                <a href="./receptionRevenueReport.html"><li class="p-1 hover:bg-gray-100">Reception Revenue Report</li></a>
+                <a href="./paymentDescription.html"><li class="p-1 hover:bg-gray-100">Payment Description</li></a>
+                <a href="./sectionWiseRevenueSummary.html"><li class="p-1 hover:bg-gray-100">Sections Wise Revenue</li></a>
+                <a href="./shareDistribution.html"><li class="p-1 hover:bg-gray-100">Share Distribution</li></a>
+                <a href="./costing.html"><li class="p-1 hover:bg-gray-100">Costing</li></a>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Authority Files Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Authority Files
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-56"
+            >
+              <ul>
+                <a href="./testprofilePricesList.html"><li class="p-1 hover:bg-gray-100">Test/Profile Prices List</li></a>
+                <a href="./testprofileDiscountsList.html"><li class="p-1 hover:bg-gray-100">Test/Profile Discounts List</li></a>
+                <a href="./general.html"><li class="p-1 hover:bg-gray-100">General</li></a>
+                <a href="./group.html"><li class="p-1 hover:bg-gray-100">Group</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Test Definition</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Test Price</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Profile Definition</li></a>
+                <a href="#"><li class="p-1 hover:bg-gray-100">Profile Price</li></a>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Patient Reports -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Patient Reports
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-72"
+            >
+              <ul>
+                <a href="./orderStatusBasedonTest.html"><li class="p-1 hover:bg-gray-100">Order Status Based on Tests</li></a>
+                <a href="./orderStatusBasedonProfile.html"><li class="p-1 hover:bg-gray-100">Order Status Based on Profile</li></a>
+                <a href="./immunologyPatientProfile.html"><li class="p-1 hover:bg-gray-100">Immunology Patient Profile Result</li></a>
+                <a href="./testResultRangeWise.html"><li class="p-1 hover:bg-gray-100">Test Results - Range Wise</li></a>
+                <a href="./labNoWiseSingleReport.html"><li class="p-1 hover:bg-gray-100">Lab No. Wise Single Report</li></a>
+                <a href="./reportPrintStatus.html"><li class="p-1 hover:bg-gray-100">Reports Print Status by Order No/Range</li></a>
+                <a href="./receptionReports.html"><li class="p-1 hover:bg-gray-100">Reception Reports</li></a>
+                <a href="./orderCompletionStatus.html"><li class="p-1 hover:bg-gray-100">Order Completion Status Based on Tests</li></a>
+                <a href="./testOrderBasedOnSpecimen.html"><li class="p-1 hover:bg-gray-100">Test Order Based on Specimen</li></a>
+                <a href="./testOrderBasedonDiagnosis.html"><li class="p-1 hover:bg-gray-100">Test Order Based on Diagnosis</li></a>
+                <a href="./microbiology.html"><li class="p-1 hover:bg-gray-100">Micorbiology C/S - Report/Search</li></a>
+                <a href="./testResultSummary.html"><li class="p-1 hover:bg-gray-100">Tests Results Summary</li></a>
+                <a href="./patDetailReport.html"><li class="p-1 hover:bg-gray-100">Patient Detail Reports</li></a>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tests Progress / Test Trend Graphs Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Tests Progress
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-44"
+            >
+              <ul>
+                <a href="./progressStatus.html"><li class="p-1 hover:bg-gray-100">Progress Status</li></a>
+                <a href="./testTrendGraphs.html"><li class="p-1 hover:bg-gray-100">Test Trend Graphs</li></a>
+                <a href="./immunologyReport.html"><li class="p-1 hover:bg-gray-100">Immunology Report</li></a>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Lab Reports Dropdown -->
+
+          <!-- Repeat the above structure for other dropdowns -->
+
+          <!-- General Reports Dropdown -->
+        </div>
+      </nav>
+    </div>
+
     <div class="sm:p-1 md:p-3 xxl:container p-5 font-sans">
       <!-- Heading -->
       <div class="sm:grid md:grid flex justify-between">
@@ -312,7 +530,7 @@
             <thead>
               <tr>
                 <th colspan="4">
-                  <div class="flex justify-between text-black font-medium">
+                  <div class="flex justify-between text-white text-lg font-medium">
                     <span>Order# <span>12/23-31601</span></span>
                     <span>Lab# <span>2</span></span>
                     <span>Date & Time <span>11/09/2023 11:29pm</span></span>
@@ -355,7 +573,7 @@
             <thead>
               <tr>
                 <th colspan="4">
-                  <div class="flex justify-between text-black font-medium">
+                  <div class="flex justify-between text-white text-lg font-medium">
                     <span>Order# <span>12/23-31601</span></span>
                     <span>Lab# <span>2</span></span>
                     <span>Date & Time <span>11/09/2023 11:29pm</span></span>
@@ -545,6 +763,33 @@
           var dateRange1 = $("#daterange1").val();
           location.href = "../Home/dashboard_c?forDatePeriod=" + dateRange1;
           //instead call all ajax calls independently
+        });
+      });
+    </script>
+    <!-- ---------------------FOR NAVBAR ------------------------------- -->
+    <script>
+      // JavaScript for Dropdowns
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all elements with class 'group'
+        const dropdowns = document.querySelectorAll(".group");
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", function (event) {
+          dropdowns.forEach((dropdown) => {
+            if (!dropdown.contains(event.target)) {
+              dropdown.querySelector(".absolute").classList.add("hidden");
+            }
+          });
+        });
+
+        // Toggle dropdown on button click
+        dropdowns.forEach((dropdown) => {
+          const button = dropdown.querySelector("button");
+          const menu = dropdown.querySelector(".absolute");
+
+          button.addEventListener("click", function () {
+            menu.classList.toggle("hidden");
+          });
         });
       });
     </script>
