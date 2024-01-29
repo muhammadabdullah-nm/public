@@ -241,6 +241,22 @@
     max-width: 1480px;
   }
 
+  .multi-select-button {
+    width: 18rem;
+  }
+
+  .input-btn {
+    width: 18rem;
+  }
+
+  .multi-select-container {
+    width: 18rem;
+  }
+
+  .multi-select-button:after {
+    margin-left: 15em;
+  }
+
   /* .multi-select-container {
     width: 18rem;
   }
