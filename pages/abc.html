@@ -375,6 +375,33 @@
             Costing
           </p>
         </div>
+
+        <!-- <div>
+          <label
+            for="startDate"
+            class="sm:text-sm md:text-lg text-black text-md font-semibold tracking-wide"
+          >
+            From:
+          </label>
+          <input
+            name="startDate"
+            type="datetime-local"
+            value=""
+            class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-72 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+          />
+          <label
+            for="endDate"
+            class="sm:text-sm md:text-lg text-black text-md font-semibold tracking-wide"
+          >
+            To:
+          </label>
+          <input
+            name="endDate"
+            type="datetime-local"
+            value=""
+            class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-72 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+          />
+        </div> -->
         <!-- Buttons for report type -->
         <div
           class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-4 justify-between"
@@ -406,6 +433,38 @@
         </div>
       </div>
 
+      <!-- Date and time picker -->
+      <div class="flex justify-center bg-orange-200 py-6 mt-3 gap-3">
+        <div>
+          <label
+            for="startDate"
+            class="sm:text-sm md:text-lg text-black text-md font-semibold tracking-wide"
+          >
+            From:
+          </label>
+          <input
+            name="startDate"
+            type="datetime-local"
+            value=""
+            class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-72 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+          />
+        </div>
+        <div>
+          <label
+            for="endDate"
+            class="sm:text-sm md:text-lg text-black text-md font-semibold tracking-wide"
+          >
+            To:
+          </label>
+          <input
+            name="endDate"
+            type="datetime-local"
+            value=""
+            class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-72 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+          />
+        </div>
+      </div>
+
       <!-- Search Box -->
       <div class="bg-blue-300 my-4 p-5 rounded-lg" id="searchBox">
         <div class="gap-3">
@@ -423,6 +482,7 @@
                     class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
                     >Section:
                   </label>
+
                   <select
                     id="section"
                     name="section"
@@ -632,7 +692,7 @@
                   </select>
                 </div>
               </div>
-              <div
+              <!-- <div
                 class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
                 <label
@@ -643,11 +703,43 @@
                 >
                 <input
                   name="daterange"
-                  id="daterange"
-                  value="29/08/2023 - 29/08/2023"
+                  type="datetime-local"
+                  value=""
+                  class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                />
+              </div> -->
+              <!-- <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <label
+                  for="startDate"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
+                >
+                  Start Date & Time:
+                </label>
+                <input
+                  name="startDate"
+                  type="datetime-local"
+                  value=""
                   class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                 />
               </div>
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <label
+                  for="endDate"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
+                >
+                  End Date & Time:
+                </label>
+                <input
+                  name="endDate"
+                  type="datetime-local"
+                  value=""
+                  class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                />
+              </div> -->
             </div>
           </form>
         </div>

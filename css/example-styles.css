@@ -148,6 +148,24 @@
   white-space: normal;
 }
 
+/* Your existing CSS styles for the search button */
+.searchInput {
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Adjust the styling to match the previous positioning and style */
+.multi-select-menu .searchInput {
+  margin: 5px; /* Adjust as needed */
+  padding: 5px; /* Adjust as needed */
+  border: 1px solid #ccc; /* Match the previous border color */
+  border-radius: 3px; /* Match the previous border radius */
+  z-index: 10;
+  margin-bottom: 2rem;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .container {
     max-width: 480px;
@@ -236,7 +254,29 @@
   } */
 }
 
-@media (min-width: 1181px) and (max-width: 1480px) {
+@media (min-width: 1181px) and (max-width: 1300px) {
+  .container {
+    max-width: 1300px;
+  }
+
+  .multi-select-button {
+    width: 16rem;
+  }
+
+  .input-btn {
+    width: 16rem;
+  }
+
+  .multi-select-container {
+    width: 16rem;
+  }
+
+  .multi-select-button:after {
+    margin-left: 13em;
+  }
+}
+
+@media (min-width: 1301px) and (max-width: 1480px) {
   .container {
     max-width: 1480px;
   }
@@ -256,22 +296,6 @@
   .multi-select-button:after {
     margin-left: 15em;
   }
-
-  /* .multi-select-container {
-    width: 18rem;
-  }
-
-  .multi-select-menuitem {
-    width: 18rem;
-  }
-
-  .multi-select-button {
-    width: 18rem;
-  }
-
-  .multi-select-button:after {
-    margin-left: 16em;
-  } */
 }
 
 @media (min-width: 1481px) and (max-width: 1600px) {
