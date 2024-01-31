@@ -376,92 +376,64 @@
           </p>
         </div>
 
-        <!-- <div>
-          <label
-            for="startDate"
-            class="sm:text-sm md:text-lg text-black text-md font-semibold tracking-wide"
-          >
-            From:
-          </label>
-          <input
-            name="startDate"
-            type="datetime-local"
-            value=""
-            class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-72 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-          />
-          <label
-            for="endDate"
-            class="sm:text-sm md:text-lg text-black text-md font-semibold tracking-wide"
-          >
-            To:
-          </label>
-          <input
-            name="endDate"
-            type="datetime-local"
-            value=""
-            class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-72 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-          />
-        </div> -->
+        <div class="flex gap-3">
+          <div>
+            <label
+              for="startDate"
+              class="sm:text-sm md:text-lg text-black text-md font-semibold tracking-wide"
+            >
+              From:
+            </label>
+            <input
+              name="startDate"
+              type="datetime-local"
+              value=""
+              class="sm:w-48 md:w-48 lg:w-48 xl:w-48 xxl:w-48 w-48 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+            />
+          </div>
+          <div>
+            <label
+              for="endDate"
+              class="sm:text-sm md:text-lg text-black text-md font-semibold tracking-wide"
+            >
+              To:
+            </label>
+            <input
+              name="endDate"
+              type="datetime-local"
+              value=""
+              class="sm:w-48 md:w-48 lg:w-48 xl:w-48 xxl:w-48 w-48 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+            />
+          </div>
+        </div>
         <!-- Buttons for report type -->
         <div
           class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-4 justify-between"
         >
           <button
-            class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-red-500 p-3 mx-2 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
+            class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-red-500 p-1.5 mx-1 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
             onclick="detailReport()"
           >
             Detail Report
           </button>
           <button
-            class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-blue-500 p-3 mx-2 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
+            class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-blue-500 p-1.5 mx-1.5 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
             onclick="report()"
           >
             Report
           </button>
           <button
-            class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-green-500 p-3 mx-2 text-green-500 rounded-lg hover:bg-green-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
+            class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-green-500 p-1.5 mx-1.5 text-green-500 rounded-lg hover:bg-green-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
             onclick="summary()"
           >
             Summary
           </button>
           <button
-            class="sm:text-sm sm:p-1 sm:mx-5 sm:mb-2 rounded-3xl border-2 border-red-700 bg-red-700 px-8 py-3 text-white hover:bg-white hover:text-red-700 hover:border-2 hover:border-red-700 transition duration-100 delay-150 hover:delay-100"
+            class="sm:text-sm sm:p-1 sm:mx-5 sm:mb-2 rounded-3xl border-2 border-red-700 bg-red-700 px-5 py-1.5 text-white hover:bg-white hover:text-red-700 hover:border-2 hover:border-red-700 transition duration-100 delay-150 hover:delay-100"
             id="btn_clear_me"
           >
             Clear
           </button>
-        </div>
-      </div>
-
-      <!-- Date and time picker -->
-      <div class="flex justify-center bg-orange-200 py-6 mt-3 gap-3">
-        <div>
-          <label
-            for="startDate"
-            class="sm:text-sm md:text-lg text-black text-md font-semibold tracking-wide"
-          >
-            From:
-          </label>
-          <input
-            name="startDate"
-            type="datetime-local"
-            value=""
-            class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-72 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-          />
-        </div>
-        <div>
-          <label
-            for="endDate"
-            class="sm:text-sm md:text-lg text-black text-md font-semibold tracking-wide"
-          >
-            To:
-          </label>
-          <input
-            name="endDate"
-            type="datetime-local"
-            value=""
-            class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-72 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-          />
         </div>
       </div>
 
