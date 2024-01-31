@@ -1,3 +1,30 @@
+// <!-- ---------------------FOR NAVBAR ------------------------------- -->
+
+// JavaScript for Dropdowns
+document.addEventListener("DOMContentLoaded", function () {
+  // Get all elements with class 'group'
+  const dropdowns = document.querySelectorAll(".group");
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", function (event) {
+    dropdowns.forEach((dropdown) => {
+      if (!dropdown.contains(event.target)) {
+        dropdown.querySelector(".absolute").classList.add("hidden");
+      }
+    });
+  });
+
+  // Toggle dropdown on button click
+  dropdowns.forEach((dropdown) => {
+    const button = dropdown.querySelector("button");
+    const menu = dropdown.querySelector(".absolute");
+
+    button.addEventListener("click", function () {
+      menu.classList.toggle("hidden");
+    });
+  });
+});
+
 var divAlert = document.getElementsByClassName("alertBox")[0]; // Assuming there is only one element with the class "alertBox"
 var divSummary = document.getElementsByClassName("summaryBox")[0]; // Assuming there is only one element with the class "summaryBox"
 var divTable = document.getElementsByClassName("detailReportBox")[0]; // Assuming there is only one element with the class "detailReportBox"

@@ -355,12 +355,6 @@
               </ul>
             </div>
           </div>
-
-          <!-- Lab Reports Dropdown -->
-
-          <!-- Repeat the above structure for other dropdowns -->
-
-          <!-- General Reports Dropdown -->
         </div>
       </nav>
     </div>
@@ -389,6 +383,7 @@
               type="datetime-local"
               value=""
               class="sm:w-48 md:w-48 lg:w-48 xl:w-48 xxl:w-48 w-48 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+              id="startDateInput"
             />
           </div>
           <div>
@@ -403,6 +398,7 @@
               type="datetime-local"
               value=""
               class="sm:w-48 md:w-48 lg:w-48 xl:w-48 xxl:w-48 w-48 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+              id="endDateInput"
             />
           </div>
         </div>
@@ -898,14 +894,25 @@
     <!-- ---------------------FOR MULTISELECT ----------------------------- -->
     <script src="../js/jquery.multi-select.js"></script>
 
-    <!-- ----------------------DATEPICKER -------------------- -->
-    <script src="../datepicker/chart.min.js"></script>
-    <script src="../datepicker/chart-plugin-datalabels.min.js"></script>
-    <script src="../datepicker/easepick.min.js"></script>
-
     <!-- ----------------------MY SCRIPT ------------------------ -->
     <script src="../js/script.js"></script>
 
+    <script>
+      // Get the current date and time in the format required by datetime-local input
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, "0");
+      const day = String(now.getDate()).padStart(2, "0");
+      const hours = String(now.getHours()).padStart(2, "0");
+      const minutes = String(now.getMinutes()).padStart(2, "0");
+
+      // Construct the value in the required format
+      const currentDatetime = `${year}-${month}-${day}T${hours}:${minutes}`;
+
+      // Set the value of the input to the current date and time
+      document.getElementById("startDateInput").value = currentDatetime;
+      document.getElementById("endDateInput").value = currentDatetime;
+    </script>
     <script>
       // $("#example").DataTable({ dom: "lrtip" });
       //new DataTable("#example");
@@ -923,102 +930,7 @@
         $("#countries option").prop("selected", true);
       });
     </script>
-    <script>
-      $(document).ready(function () {
-        //$("#tabs,#labRadTabs,#labRadTabs2").tabs();
-        Chart.register(ChartDataLabels);
-        Chart.defaults.set("plugins.datalabels", {
-          color: "#FFF",
-          display: "auto",
-        });
-        const picker = new easepick.create({
-          element: "#daterange",
 
-          css: [
-            "../datepicker/easepick.skin.light.css",
-            "../datepicker/easepick.skin.blue.css",
-          ],
-          zIndex: 99999,
-          format: "DD/MM/YYYY HH:mm",
-          calendars: 2,
-          grid: 2,
-          AmpPlugin: {
-            //dropdown: {
-            //    years: true,
-            //    minYear: 2022
-            //},
-            //resetButton: true,
-            //darkMode: false
-          },
-          LockPlugin: {
-            //minDate: "2022-02-10T00:00:00.000Z",
-            //selectBackward: true
-          },
-          TimePlugin: {
-            format: "HH:mm",
-          },
-          plugins: [
-            "AmpPlugin",
-            "RangePlugin",
-            "LockPlugin",
-            "PresetPlugin",
-            "TimePlugin",
-          ],
-        });
-        $("#searchByDateRange").on("click", function () {
-          var dateRange = $("#daterange").val();
-          location.href = "../Home/dashboard_c?forDatePeriod=" + dateRange;
-          //instead call all ajax calls independently
-        });
-      });
-      $(document).ready(function () {
-        //$("#tabs,#labRadTabs,#labRadTabs2").tabs();
-        Chart.register(ChartDataLabels);
-        Chart.defaults.set("plugins.datalabels", {
-          color: "#FFF",
-          display: "auto",
-        });
-        const picker = new easepick.create({
-          element: "#daterange1",
-
-          css: [
-            "../datepicker/easepick.skin.light.css",
-            "../datepicker/easepick.skin.blue.css",
-          ],
-          zIndex: 99999,
-          format: "DD/MM/YYYY HH:mm",
-          calendars: 2,
-          grid: 2,
-          AmpPlugin: {
-            //dropdown: {
-            //    years: true,
-            //    minYear: 2022
-            //},
-            //resetButton: true,
-            //darkMode: false
-          },
-          LockPlugin: {
-            //minDate: "2022-02-10T00:00:00.000Z",
-            //selectBackward: true
-          },
-          TimePlugin: {
-            format: "HH:mm",
-          },
-          plugins: [
-            "AmpPlugin",
-            "RangePlugin",
-            "LockPlugin",
-            "PresetPlugin",
-            "TimePlugin",
-          ],
-        });
-        $("#searchByDateRange").on("click", function () {
-          var dateRange1 = $("#daterange1").val();
-          location.href = "../Home/dashboard_c?forDatePeriod=" + dateRange1;
-          //instead call all ajax calls independently
-        });
-      });
-    </script>
     <!-- ---------------------FOR NAVBAR ------------------------------- -->
     <script>
       // JavaScript for Dropdowns
