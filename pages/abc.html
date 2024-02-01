@@ -3,25 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="../input.css" />
-    <link rel="stylesheet" href="../output.css" />
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    /> -->
-
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap4.min.css"
     />
-
+    <link rel="stylesheet" href="../input.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/demo-styles.css" />
-    <link rel="stylesheet" href="../css/example-styles.css" />
-    <!-- 
-    <link rel="stylesheet" href="datepicker/easepick.skin.blue.css" />
-    <link rel="stylesheet" href="datepicker/easepick.skin.light.css" /> -->
+    <link rel="stylesheet" href="../css/sumoselect.min.css" />
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.sumoselect.min.js"></script>
     <title>Costing</title>
   </head>
   <body class="mt-0 pt-0 bg-white">
@@ -446,35 +437,25 @@
               >
                 <div class="xl:w-64 xxl:w-64">
                   <label
-                    for="section"
+                    for="paymentType"
                     class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Section:
+                    >Payment Type:
                   </label>
-
-                  <select
-                    id="section"
-                    name="section"
-                    class="rangeSelect w-72"
-                    multiple
-                  >
-                    <option
-                      value="selectAll"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Select All
-                    </option>
-                    <option
-                      value="section1"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Section1
-                    </option>
-                    <option
-                      value="section2"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Section2
-                    </option>
+                  <select multiple="multiple" class="combined-select">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="porsche">Porche</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
                   </select>
                 </div>
               </div>
@@ -487,42 +468,21 @@
                     class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
                     >Payment Type:
                   </label>
-                  <select
-                    id="paymentType"
-                    name="paymentType"
-                    class="rangeSelect w-72"
-                    multiple
-                  >
-                    <option
-                      value="selectAll"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Select All
-                    </option>
-                    <option
-                      value="poor"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Poor
-                    </option>
-                    <option
-                      value="staff"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      PIMS Staff
-                    </option>
-                    <option
-                      value="entitled"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Entitled
-                    </option>
-                    <option
-                      value="general"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      General
-                    </option>
+                  <select multiple="multiple" class="combined-select">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="porsche">Porche</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
                   </select>
                 </div>
               </div>
@@ -531,183 +491,190 @@
               >
                 <div class="xl:w-64 xxl:w-64">
                   <label
-                    for="test"
+                    for="paymentType"
                     class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Test:
+                    >Payment Type:
                   </label>
-                  <select
-                    id="test"
-                    name="test"
-                    class="rangeSelect w-72"
-                    multiple
-                  >
-                    <option
-                      value="selectAll"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Select All
-                    </option>
-                    <option
-                      value="alt"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      ALT
-                    </option>
-                    <option
-                      value="albumin"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Albumin
-                    </option>
-                    <option
-                      value="papsmear"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Papsmear
-                    </option>
+                  <select multiple="multiple" class="combined-select">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="porsche">Porche</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
                   </select>
                 </div>
               </div>
               <div
                 class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-                <div class="">
+                <div class="xl:w-64 xxl:w-64">
                   <label
-                    for="profile"
+                    for="paymentType"
                     class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Profile:
+                    >Payment Type:
                   </label>
-                  <select
-                    id="profile"
-                    name="profile"
-                    class="rangeSelect"
-                    multiple
-                  >
-                    <option
-                      value="selectAll"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Select All
-                    </option>
-                    <option
-                      value="d1"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      WIth immunology
-                    </option>
-                    <option
-                      value="d2"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Clotting Profile
-                    </option>
-                    <option
-                      value="d3"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Dengue Screening By ELISA
-                    </option>
-                    <option
-                      value="d4"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Cardiac Profile
-                    </option>
+                  <select multiple="multiple" class="combined-select">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="porsche">Porche</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
                   </select>
                 </div>
               </div>
               <div
                 class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-                <div class="">
+                <div class="xl:w-64 xxl:w-64">
                   <label
-                    for="dummy"
+                    for="paymentType"
                     class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Profile:</label
-                  >
-
-                  <select id="dummy" name="dummy" class="rangeSelect" multiple>
-                    <option
-                      value="selectAll"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Select All
-                    </option>
-                    <option
-                      value="d1"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      WIth immunology
-                    </option>
-                    <option
-                      value="d2"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Clotting Profile
-                    </option>
-                    <option
-                      value="d3"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Dengue Screening By ELISA
-                    </option>
-                    <option
-                      value="d4"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Cardiac Profile
-                    </option>
+                    >Payment Type:
+                  </label>
+                  <select multiple="multiple" class="combined-select">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="porsche">Porche</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
                   </select>
                 </div>
-              </div>
-              <!-- <div
-                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <label
-                  for="stDate"
-                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
-                >
-                  Date & Time:</label
-                >
-                <input
-                  name="daterange"
-                  type="datetime-local"
-                  value=""
-                  class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                />
-              </div> -->
-              <!-- <div
-                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <label
-                  for="startDate"
-                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
-                >
-                  Start Date & Time:
-                </label>
-                <input
-                  name="startDate"
-                  type="datetime-local"
-                  value=""
-                  class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                />
               </div>
               <div
                 class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-                <label
-                  for="endDate"
-                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
-                >
-                  End Date & Time:
-                </label>
-                <input
-                  name="endDate"
-                  type="datetime-local"
-                  value=""
-                  class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                />
-              </div> -->
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="paymentType"
+                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Payment Type:
+                  </label>
+                  <select multiple="multiple" class="combined-select">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="porsche">Porche</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="paymentType"
+                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Payment Type:
+                  </label>
+                  <select multiple="multiple" class="combined-select">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="porsche">Porche</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="paymentType"
+                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Payment Type:
+                  </label>
+                  <select multiple="multiple" class="combined-select">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="porsche">Porche</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="paymentType"
+                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Payment Type:
+                  </label>
+                  <select multiple="multiple" class="combined-select">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="porsche">Porche</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                    <option value="mitsubishi">Mitsubishi</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </form>
         </div>
@@ -879,9 +846,11 @@
       </div>
     </div>
 
-    <!-- ---------------------FOR DATATABLE ------------------------------- -->
-    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <!-- jQuery Sumo Select-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="../js/jquery.sumoselect.min.js"></script>
+
+    <!-- DataTables and Buttons -->
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
@@ -891,72 +860,10 @@
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 
-    <!-- ---------------------FOR MULTISELECT ----------------------------- -->
-    <script src="../js/jquery.multi-select.js"></script>
-
-    <!-- ----------------------MY SCRIPT ------------------------ -->
+    <!-- Your custom script -->
     <script src="../js/script.js"></script>
 
-    <script>
-      // Get the current date and time in the format required by datetime-local input
-      const now = new Date();
-      const year = now.getFullYear();
-      const month = String(now.getMonth() + 1).padStart(2, "0");
-      const day = String(now.getDate()).padStart(2, "0");
-      const hours = String(now.getHours()).padStart(2, "0");
-      const minutes = String(now.getMinutes()).padStart(2, "0");
-
-      // Construct the value in the required format
-      const currentDatetime = `${year}-${month}-${day}T${hours}:${minutes}`;
-
-      // Set the value of the input to the current date and time
-      document.getElementById("startDateInput").value = currentDatetime;
-      document.getElementById("endDateInput").value = currentDatetime;
-    </script>
-    <script>
-      // $("#example").DataTable({ dom: "lrtip" });
-      //new DataTable("#example");
-    </script>
-    <script type="text/javascript">
-      $(function () {
-        $("#section").multiSelect();
-        $("#profile").multiSelect();
-        $("#test").multiSelect();
-        $("#paymentType").multiSelect();
-        $("#dummy").multiSelect();
-      });
-
-      $("#select_all").click(function () {
-        $("#countries option").prop("selected", true);
-      });
-    </script>
-
-    <!-- ---------------------FOR NAVBAR ------------------------------- -->
-    <script>
-      // JavaScript for Dropdowns
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get all elements with class 'group'
-        const dropdowns = document.querySelectorAll(".group");
-
-        // Close dropdown when clicking outside
-        document.addEventListener("click", function (event) {
-          dropdowns.forEach((dropdown) => {
-            if (!dropdown.contains(event.target)) {
-              dropdown.querySelector(".absolute").classList.add("hidden");
-            }
-          });
-        });
-
-        // Toggle dropdown on button click
-        dropdowns.forEach((dropdown) => {
-          const button = dropdown.querySelector("button");
-          const menu = dropdown.querySelector(".absolute");
-
-          button.addEventListener("click", function () {
-            menu.classList.toggle("hidden");
-          });
-        });
-      });
-    </script>
+    <!-- SumoSelect Initialization -->
+    <script></script>
   </body>
 </html>

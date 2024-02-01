@@ -25,6 +25,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// -----------------------DATE TIME PICKER -------------------------
+// Get the current date and time in the format required by datetime-local input
+const now = new Date();
+const year = now.getFullYear();
+const month = String(now.getMonth() + 1).padStart(2, "0");
+const day = String(now.getDate()).padStart(2, "0");
+const hours = String(now.getHours()).padStart(2, "0");
+const minutes = String(now.getMinutes()).padStart(2, "0");
+
+// Construct the value in the required format
+const currentDatetime = `${year}-${month}-${day}T${hours}:${minutes}`;
+
+// Set the value of the input to the current date and time
+document.getElementById("startDateInput").value = currentDatetime;
+document.getElementById("endDateInput").value = currentDatetime;
+
 var divAlert = document.getElementsByClassName("alertBox")[0]; // Assuming there is only one element with the class "alertBox"
 var divSummary = document.getElementsByClassName("summaryBox")[0]; // Assuming there is only one element with the class "summaryBox"
 var divTable = document.getElementsByClassName("detailReportBox")[0]; // Assuming there is only one element with the class "detailReportBox"
@@ -272,4 +288,17 @@ $(document).ready(function () {
       },
     ],
   });
+});
+
+// -------------------SUMO SELECT ------------------
+// Ensure the DOM is ready
+$(document).ready(function () {
+  // Initialize SumoSelect after a slight delay to ensure it's loaded after the page elements
+  setTimeout(function () {
+    $(".combined-select").SumoSelect({
+      search: true,
+      searchText: "Enter here.",
+      selectAll: true,
+    });
+  }); // You can adjust the delay if needed
 });
