@@ -3,18 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="../input.css" />
-    <link rel="stylesheet" href="../output.css" />
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap4.min.css"
     />
-
+    <link rel="stylesheet" href="../input.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/demo-styles.css" />
-    <link rel="stylesheet" href="../css/example-styles.css" />
-    <title>Reception Revenue Report</title>
+    <link rel="stylesheet" href="../css/sumoselect.min.css" />
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.sumoselect.min.js"></script>
+    <title>Reception Revenue Reports</title>
   </head>
   <body class="mt-0 pt-0 bg-white">
     <div class="bg-slate-100 border-b shadow-sm p-1">
@@ -203,13 +202,13 @@
                 <a href="#"
                   ><li class="p-1 hover:bg-gray-100">Test Definition</li></a
                 >
-                <a href="#"
+                <a href="./testPrice.html"
                   ><li class="p-1 hover:bg-gray-100">Test Price</li></a
                 >
                 <a href="#"
                   ><li class="p-1 hover:bg-gray-100">Profile Definition</li></a
                 >
-                <a href="#"
+                <a href="./profilePrice.html"
                   ><li class="p-1 hover:bg-gray-100">Profile Price</li></a
                 >
               </ul>
@@ -347,26 +346,21 @@
               </ul>
             </div>
           </div>
-
-          <!-- Lab Reports Dropdown -->
-
-          <!-- Repeat the above structure for other dropdowns -->
-
-          <!-- General Reports Dropdown -->
         </div>
       </nav>
     </div>
 
     <div class="sm:p-1 md:p-3 xxl:container p-5 font-sans">
       <!-- Heading -->
-      <div class="sm:grid md:grid flex justify-between">
-        <div class="sm:mb-4 sm:text-center md:text-center md:mb-4">
+      <div class="flex flex-row justify-between my-3">
+        <div class="sm:mb-4 sm:text-left md:text-center md:my-2">
           <p
-            class="sm:font-semibold sm:text-xl md:text-xl text-2xl font-bold underline underline-offset-8 align-middle"
+            class="sm:font-semibold sm:text-xl mb-2 md:text-xl ml-12 text-2xl font-bold underline underline-offset-8 align-middle"
           >
-            Reception Revenue Report
+            Reception Revenue Reports
           </p>
         </div>
+
         <div class="flex gap-3">
           <div>
             <label
@@ -434,59 +428,82 @@
       <div class="bg-blue-300 my-4 p-5 rounded-lg" id="searchBox">
         <div class="gap-3">
           <!-- First Row -->
+
           <form action="">
             <div
-              class="grid grid-rows-2 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
+              class="grid grid-rows-5 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 xxl:grid-cols-4"
             >
               <div
-                class="mb-5 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-                <label
-                  for="stDate"
-                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
-                  >Registration Date & Time:</label
-                >
-                <input
-                  name="daterange"
-                  id="daterange"
-                  value="29/08/2023 - 29/08/2023"
-                  class="sm:w-60 md:w-80 lg:w-80 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                />
+                <div class="xl:w-64 xxl:w-64">
+                  <div id="section">
+                    <label
+                      for="section"
+                      class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                      >Section:</label
+                    >
+                    <select
+                      multiple="multiple"
+                      class="combined-select"
+                      id="section"
+                    >
+                      <option value="section1">Biochemistry</option>
+                      <option value="section2">Histopathology</option>
+                      <option value="section3">Biochemistry2</option>
+                    </select>
+                  </div>
+                </div>
               </div>
               <div
                 class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
                 <div class="xl:w-64 xxl:w-64">
+                  <div id="patientType">
+                    <label
+                      for="patientType"
+                      class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                      >Patient Type:</label
+                    >
+                    <select
+                      multiple="multiple"
+                      class="combined-select"
+                      id="patientType"
+                    >
+                      <option value="entitled">Entitled</option>
+                      <option value="free">Free</option>
+                      <option value="mustahiq">Mustahiq</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div id="">
                   <label
-                    for="section"
+                    for="ward"
                     class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Section:</label
+                    >Ward:</label
                   >
-
-                  <select
-                    id="section"
-                    name="section"
-                    class="rangeSelect w-72"
-                    multiple
+                  <select multiple="multiple" class="combined-select" id="ward">
+                    <option value="ward1">Ward1</option>
+                    <option value="ward2">Ward2</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div id="">
+                  <label
+                    for="opd"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >OPD:</label
                   >
-                    <option
-                      value="selectAll"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Select All
-                    </option>
-                    <option
-                      value="section1"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Section1
-                    </option>
-                    <option
-                      value="section2"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Section2
-                    </option>
+                  <select multiple="multiple" class="combined-select" id="opd">
+                    <option value="opd1">OPD1</option>
+                    <option value="opd2">OPD2</option>
                   </select>
                 </div>
               </div>
@@ -503,190 +520,11 @@
                   id="name"
                   name="name"
                   type="text"
-                  class="sm:w-60 md:w-80 lg:w-80 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                  class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                   placeholder="Name"
                 />
               </div>
-              <div
-                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <div class="xl:w-64 xxl:w-64">
-                  <label
-                    for="patType"
-                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Patient Type:</label
-                  >
-
-                  <select
-                    id="patType"
-                    name="patType"
-                    class="rangeSelect w-72"
-                    multiple
-                  >
-                    <option
-                      value="selectAll"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Select All
-                    </option>
-                    <option
-                      value="general"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      General
-                    </option>
-                    <option
-                      value="free"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Free
-                    </option>
-                    <option
-                      value="entitled"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Entitled
-                    </option>
-                    <option
-                      value="zakat"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Zakat
-                    </option>
-                    <option
-                      value="pims"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      PIMS Staff
-                    </option>
-                  </select>
-                </div>
-              </div>
-
-              <div
-                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <div class="xl:w-64 xxl:w-64">
-                  <label
-                    for="opd"
-                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >OPD:</label
-                  >
-
-                  <select id="opd" name="opd" class="rangeSelect w-72" multiple>
-                    <option
-                      value="selectAll"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Select All
-                    </option>
-                    <option
-                      value="d1"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Antenatal
-                    </option>
-                    <option
-                      value="d2"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      BCC
-                    </option>
-                    <option
-                      value="d3"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Blood Bank
-                    </option>
-                    <option
-                      value="d4"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Cardiology
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div
-                class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <div class="xl:w-64 xxl:w-64">
-                  <label
-                    for="wards"
-                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Ward:</label
-                  >
-
-                  <select
-                    id="ward"
-                    name="ward"
-                    class="rangeSelect w-72"
-                    multiple
-                  >
-                    <option
-                      value="selectAll"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Select All
-                    </option>
-                    <option
-                      value="ward1"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      A&E
-                    </option>
-                    <option
-                      value="ward2"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      BCC
-                    </option>
-                    <option
-                      value="ward3"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      BCI
-                    </option>
-                    <option
-                      value="ward4"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Bone Marrow Transplant
-                    </option>
-                    <option
-                      value="ward5"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Cardiac Center
-                    </option>
-                    <option
-                      value="ward6"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Cardiology Ward
-                    </option>
-                    <option
-                      value="ward7"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      CCU
-                    </option>
-                    <option
-                      value="ward8"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Children Hospital Indoor
-                    </option>
-                    <option
-                      value="ward9"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      CSI
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div class="md:w-80 mb-5 col-span-2 xl:col-span-2">
+              <div class="md:w-80 mb-5 xl:col-span-2 col-span-2">
                 <label
                   for="mr"
                   class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
@@ -719,8 +557,13 @@
                   />
                 </div>
               </div>
+            </div>
+
+            <div
+              class="grid grid-rows-1 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 xxl:grid-cols-4"
+            >
               <div
-                class="md:w-80 mb-5 col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+                class="md:w-80 mb-5 sm:col-span-2 md:col-span-2 lg:col-span-2 xl:col-span-2 col-span-2"
               >
                 <label
                   for="order"
@@ -795,7 +638,7 @@
       <!-- Result Box -->
       <div class="sm:grid flex justify-between mb-7">
         <p
-          class="sm:text-lg sm:mb-5 font-semibold text-2xl underline underline-offset-8 align-middle"
+          class="sm:text-lg sm:mb-5 mt-2 font-semibold text-2xl underline underline-offset-8 align-middle"
         >
           Results
         </p>
@@ -818,6 +661,7 @@
         </div> -->
       </div>
       <!-- Results Table -->
+
       <div class="resultsAll">
         <div class="alertBox">
           <div class="block align-middle bg-amber-100 p-5 border border-black">
@@ -948,9 +792,12 @@
         </div>
       </div>
     </div>
-    <!-- ---------------------FOR DATATABLE ------------------------------- -->
-    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+    <!-- jQuery Sumo Select-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="../js/jquery.sumoselect.min.js"></script>
+
+    <!-- DataTables and Buttons -->
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
@@ -960,30 +807,10 @@
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 
-    <!-- ---------------------FOR MULTISELECT ----------------------------- -->
-    <script src="../js/jquery.multi-select.js"></script>
-
-    <!-- ----------------------MY SCRIPT ------------------------ -->
+    <!-- Your custom script -->
     <script src="../js/script.js"></script>
 
-    <script>
-      // $("#example").DataTable({ dom: "lrtip" });
-      //new DataTable("#example");
-    </script>
-    <script type="text/javascript">
-      $(function () {
-        $("#patType").multiSelect();
-        $("#test").multiSelect();
-        $("#opd").multiSelect();
-        $("#section").multiSelect();
-        $("#poorDeclBy").multiSelect();
-        $("#paymentType").multiSelect();
-        $("#ward").multiSelect();
-      });
-
-      $("#select_all").click(function () {
-        $("#countries option").prop("selected", true);
-      });
-    </script>
+    <!-- SumoSelect Initialization -->
+    <script></script>
   </body>
 </html>

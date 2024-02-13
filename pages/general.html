@@ -3,19 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="../input.css" />
-    <link rel="stylesheet" href="../output.css" />
-
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap4.min.css"
     />
-
+    <link rel="stylesheet" href="../input.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/demo-styles.css" />
-    <link rel="stylesheet" href="../css/example-styles.css" />
-    <title>General</title>
+    <link rel="stylesheet" href="../css/sumoselect.min.css" />
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.sumoselect.min.js"></script>
+    <title>Costing</title>
   </head>
   <body class="mt-0 pt-0 bg-white">
     <div class="bg-slate-100 border-b shadow-sm p-1">
@@ -348,26 +346,21 @@
               </ul>
             </div>
           </div>
-
-          <!-- Lab Reports Dropdown -->
-
-          <!-- Repeat the above structure for other dropdowns -->
-
-          <!-- General Reports Dropdown -->
         </div>
       </nav>
     </div>
 
     <div class="sm:p-1 md:p-3 xxl:container p-5 font-sans">
       <!-- Heading -->
-      <div class="sm:grid md:grid flex justify-between">
-        <div class="sm:mb-4 sm:text-center md:text-center md:mb-4">
+      <div class="flex flex-row justify-between my-3">
+        <div class="sm:mb-4 sm:text-left md:text-center md:my-2">
           <p
-            class="sm:font-semibold sm:text-xl md:text-xl text-2xl font-bold underline underline-offset-8 align-middle"
+            class="sm:font-semibold sm:text-xl mb-2 md:text-xl ml-12 text-2xl font-bold underline underline-offset-8 align-middle"
           >
             General
           </p>
         </div>
+
         <div class="flex gap-3">
           <div>
             <label
@@ -443,111 +436,54 @@
                 class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
                 <div class="xl:w-64 xxl:w-64">
-                  <label
-                    for="completion"
-                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Report Of :</label
-                  >
-
-                  <select
-                    id="completion"
-                    name="completion"
-                    class="rangeSelect w-72"
-                    multiple
-                  >
-                    <option
-                      value="both"
-                      class="text-gray-700 block px-4 py-3 text-sm"
+                  <div id="reportOf">
+                    <label
+                      for="reportOf"
+                      class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                      >Report Of:</label
                     >
-                      Cities
-                    </option>
-                    <option
-                      value="both"
-                      class="text-gray-700 block px-4 py-3 text-sm"
+                    <select
+                      multiple="multiple"
+                      class="combined-select"
+                      id="reportOf"
                     >
-                      Bacteria
-                    </option>
-                    <option
-                      value="both"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      OPDs
-                    </option>
-                    <option
-                      value="both"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Organizations
-                    </option>
-                    <option
-                      value="both"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Reference Units
-                    </option>
-                    <option
-                      value="both"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Relations
-                    </option>
-                    <option
-                      value="both"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Specimens
-                    </option>
-                    <option
-                      value="both"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Wards
-                    </option>
-                    <option
-                      value="both"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Non Ranged Test values
-                    </option>
-                    <option
-                      value="both"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Staff Designations
-                    </option>
-                  </select>
+                      <option value="cities">Cities</option>
+                      <option value="basteria">Bacteria</option>
+                      <option value="section3">Section3</option>
+                    </select>
+                  </div>
                 </div>
               </div>
               <div
                 class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
                 <label
-                  for="section"
+                  for="code"
                   class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
                   >Code :</label
                 >
                 <input
-                  id="section"
-                  name="section"
+                  id="code"
+                  name="code"
                   type="text"
-                  class="sm:w-60 md:w-80 lg:w-80 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                  placeholder="Section"
+                  class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-64 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                  placeholder="Code"
                 />
               </div>
               <div
                 class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
                 <label
-                  for="lab"
+                  for="description"
                   class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
                   >Description :</label
                 >
                 <input
-                  id="lab"
-                  name="lab"
+                  id="description"
+                  name="description"
                   type="text"
-                  class="sm:w-60 md:w-80 lg:w-80 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                  placeholder="Lab No."
+                  class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-64 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                  placeholder="Description"
                 />
               </div>
             </div>
@@ -558,7 +494,7 @@
       <!-- Result Box -->
       <div class="sm:grid flex justify-between mb-7">
         <p
-          class="sm:text-lg sm:mb-5 font-semibold text-2xl underline underline-offset-8 align-middle"
+          class="sm:text-lg sm:mb-5 mt-2 font-semibold text-2xl underline underline-offset-8 align-middle"
         >
           Results
         </p>
@@ -709,9 +645,11 @@
       </div>
     </div>
 
-    <!-- ---------------------FOR DATATABLE ------------------------------- -->
-    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <!-- jQuery Sumo Select-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="../js/jquery.sumoselect.min.js"></script>
+
+    <!-- DataTables and Buttons -->
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
@@ -721,40 +659,10 @@
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 
-    <!-- ---------------------FOR MULTISELECT ----------------------------- -->
-    <script src="../js/jquery.multi-select.js"></script>
-
-    <!-- ----------------------MY SCRIPT ------------------------ -->
+    <!-- Your custom script -->
     <script src="../js/script.js"></script>
 
-    <script>
-      // $("#example").DataTable({ dom: "lrtip" });
-      //new DataTable("#example");
-    </script>
-    <script type="text/javascript">
-      $(function () {
-        $("#gender").multiSelect();
-        $("#city").multiSelect();
-        $("#patType").multiSelect();
-        $("#refBy").multiSelect();
-        $("#completion").multiSelect();
-        $("#department").multiSelect();
-        $("#orderedBy").multiSelect();
-        $("#labNo").multiSelect();
-        $("#section").multiSelect();
-        $("#profile").multiSelect();
-        $("#sampleType").multiSelect();
-        $("#profileTest").multiSelect();
-        $("#diagnosis").multiSelect();
-        $("#resultWise").multiSelect();
-        $("#ward").multiSelect();
-        $("#resultEnteredBy").multiSelect();
-        $("#commentedBy").multiSelect();
-      });
-
-      $("#select_all").click(function () {
-        $("#countries option").prop("selected", true);
-      });
-    </script>
+    <!-- SumoSelect Initialization -->
+    <script></script>
   </body>
 </html>

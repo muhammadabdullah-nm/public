@@ -216,7 +216,7 @@
 }
 .SumoSelect > .optWrapper > .options li label {
   text-overflow: ellipsis;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   overflow: hidden;
   display: block;
   cursor: pointer;

@@ -3,19 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="../input.css" />
-    <link rel="stylesheet" href="../output.css" />
-
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap4.min.css"
     />
-
+    <link rel="stylesheet" href="../input.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/demo-styles.css" />
-    <link rel="stylesheet" href="../css/example-styles.css" />
-    <title>Immunology Patient Profile Results</title>
+    <link rel="stylesheet" href="../css/sumoselect.min.css" />
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.sumoselect.min.js"></script>
+    <title>Costing</title>
   </head>
   <body class="mt-0 pt-0 bg-white">
     <div class="bg-slate-100 border-b shadow-sm p-1">
@@ -348,26 +346,21 @@
               </ul>
             </div>
           </div>
-
-          <!-- Lab Reports Dropdown -->
-
-          <!-- Repeat the above structure for other dropdowns -->
-
-          <!-- General Reports Dropdown -->
         </div>
       </nav>
     </div>
 
     <div class="sm:p-1 md:p-3 xxl:container p-5 font-sans">
       <!-- Heading -->
-      <div class="sm:grid md:grid flex justify-between">
-        <div class="sm:mb-4 sm:text-center md:text-center md:mb-4">
+      <div class="flex flex-row justify-between my-3">
+        <div class="sm:mb-4 sm:text-left md:text-center md:my-2">
           <p
-            class="sm:font-semibold sm:text-xl md:text-xl text-2xl font-bold underline underline-offset-8 align-middle"
+            class="sm:font-semibold sm:text-xl mb-2 md:text-xl ml-12 text-2xl font-bold underline underline-offset-8 align-middle"
           >
-            Immunology Patient Profile Results (TO be discussed)
+            Immunology Patient Profile
           </p>
         </div>
+
         <div class="flex gap-3">
           <div>
             <label
@@ -435,126 +428,50 @@
       <div class="bg-blue-300 my-4 p-5 rounded-lg" id="searchBox">
         <div class="gap-3">
           <!-- First Row -->
+
           <form action="">
             <div
-              class="grid grid-rows-3 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xxl:grid-cols-2"
+              class="grid grid-rows-2 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 xxl:grid-cols-4"
             >
-              <div
-                class="mb-5 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <label
-                  for="stDate"
-                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
-                  >Registration Date & Time:</label
-                >
-                <input
-                  name="daterange"
-                  id="daterange"
-                  value="29/08/2023 - 29/08/2023"
-                  class="sm:w-60 md:w-80 lg:w-80 w-80 form-control select-btn mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                />
-              </div>
               <div
                 class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-                <div class="">
-                  <label
-                    for="profile"
-                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Profile:</label
-                  >
-
-                  <select
-                    id="profile"
-                    name="profile"
-                    class="rangeSelect"
-                    multiple
-                  >
-                    <option
-                      value="selectAll"
-                      class="text-gray-700 block px-4 py-3 text-sm"
+                <div class="xl:w-64 xxl:w-64">
+                  <div id="profile">
+                    <label
+                      for="profile"
+                      class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                      >Profile:</label
                     >
-                      Select All
-                    </option>
-                    <option
-                      value="d1"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      WIth immunology
-                    </option>
-                    <option
-                      value="d2"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Clotting Profile
-                    </option>
-                    <option
-                      value="d3"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Dengue Screening By ELISA
-                    </option>
-                    <option
-                      value="d4"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Cardiac Profile
-                    </option>
-                  </select>
+                    <select multiple="multiple" class="combined-select">
+                      <option value="profile3">Cardiac Profile</option>
+                      <option value="profile2">
+                        Dengue Screening By ELISA
+                      </option>
+                      <option value="profile1">With immunology</option>
+                    </select>
+                  </div>
                 </div>
               </div>
               <div
                 class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-                <div>
+                <div id="resultWise">
                   <label
-                    for="resultWise"
-                    class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block mb-1"
-                    >Result</label
+                    for="result"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Result:</label
                   >
-
                   <select
-                    id="resultWise"
-                    name="resultWise"
-                    class="rangeSelect"
-                    multiple
+                    multiple="multiple"
+                    class="combined-select"
+                    id="result"
                   >
-                    <option
-                      value="selectAll"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Select All
-                    </option>
-                    <option
-                      value="d1"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Positive
-                    </option>
-                    <option
-                      value="d2"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Negative
-                    </option>
-                    <option
-                      value="d3"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Indeterminate
-                    </option>
-                    <option
-                      value="d4"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Borderline
-                    </option>
-                    <option
-                      value="d4"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Repeat
-                    </option>
+                    <option value="profile1">Positive</option>
+                    <option value="profile1">Negative</option>
+                    <option value="profile1">Indeterminate</option>
+                    <option value="profile2">Borderline</option>
+                    <option value="profile3">Repeat</option>
                   </select>
                 </div>
               </div>
@@ -570,50 +487,26 @@
                   id="name"
                   name="name"
                   type="text"
-                  class="sm:w-60 md:w-80 lg:w-80 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                  class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                   placeholder="Name"
                 />
               </div>
               <div
                 class="mb-7 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-                <div>
+                <div id="">
                   <label
                     for="gender"
-                    class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block mb-1"
-                    >Gender</label
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Gender:</label
                   >
-
                   <select
+                    multiple="multiple"
+                    class="combined-select"
                     id="gender"
-                    name="gender"
-                    class="rangeSelect"
-                    multiple
                   >
-                    <option
-                      value="selectAll"
-                      class="text-gray-700 block px-4 py-3 text-sm"
-                    >
-                      Select All
-                    </option>
-                    <option
-                      value="d1"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Male
-                    </option>
-                    <option
-                      value="d2"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Female
-                    </option>
-                    <option
-                      value="d2"
-                      class="text-gray-700 block px-4 py-2 text-sm"
-                    >
-                      Other
-                    </option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
                   </select>
                 </div>
               </div>
@@ -629,10 +522,14 @@
                   id="Labno"
                   name="Labno"
                   type="text"
-                  class="sm:w-60 md:w-80 lg:w-80 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                  class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                   placeholder="Lab No."
                 />
               </div>
+            </div>
+            <div
+              class="grid grid-rows-1 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 xxl:grid-cols-4"
+            >
               <div class="md:w-80 mb-5 xl:col-span-2 col-span-2">
                 <label
                   for="mr"
@@ -661,7 +558,7 @@
                     id="mr"
                     name="mr"
                     type="text"
-                    class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                    class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:ml-0 lg:w-80 xl:w-48 xl:ml-0 xxl:w-48 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                     placeholder="MRN"
                   />
                 </div>
@@ -709,7 +606,7 @@
       <!-- Result Box -->
       <div class="sm:grid flex justify-between mb-7">
         <p
-          class="sm:text-lg sm:mb-5 font-semibold text-2xl underline underline-offset-8 align-middle"
+          class="sm:text-lg sm:mb-5 mt-2 font-semibold text-2xl underline underline-offset-8 align-middle"
         >
           Results
         </p>
@@ -732,6 +629,7 @@
         </div> -->
       </div>
       <!-- Results Table -->
+
       <div class="resultsAll">
         <div class="alertBox">
           <div class="block align-middle bg-amber-100 p-5 border border-black">
@@ -913,9 +811,11 @@
       </div>
     </div>
 
-    <!-- ---------------------FOR DATATABLE ------------------------------- -->
-    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <!-- jQuery Sumo Select-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="../js/jquery.sumoselect.min.js"></script>
+
+    <!-- DataTables and Buttons -->
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
@@ -925,36 +825,10 @@
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 
-    <!-- ---------------------FOR MULTISELECT ----------------------------- -->
-    <script src="../js/jquery.multi-select.js"></script>
-
-    <!-- ----------------------MY SCRIPT ------------------------ -->
+    <!-- Your custom script -->
     <script src="../js/script.js"></script>
 
-    <script>
-      //new DataTable("#example");
-    </script>
-    <script type="text/javascript">
-      $(function () {
-        $("#gender").multiSelect();
-        $("#city").multiSelect();
-        $("#patType").multiSelect();
-        $("#referredBy").multiSelect();
-        $("#dept").multiSelect();
-        $("#tg").multiSelect();
-        $("#labNo").multiSelect();
-        $("#section").multiSelect();
-        $("#profile").multiSelect();
-        $("#test").multiSelect();
-        $("#resultWise").multiSelect();
-        $("#labNo").multiSelect();
-        $("#gender").multiSelect();
-        $("#ward").multiSelect();
-      });
-
-      $("#select_all").click(function () {
-        $("#countries option").prop("selected", true);
-      });
-    </script>
+    <!-- SumoSelect Initialization -->
+    <script></script>
   </body>
 </html>
