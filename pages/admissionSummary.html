@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap4.min.css"
+    />
+    <link rel="stylesheet" href="../input.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/sumoselect.min.css" />
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.sumoselect.min.js"></script>
+    <title>Admission Summary</title>
+  </head>
+  <body class="mt-0 pt-0 bg-white">
+    <div class="bg-slate-100 border-b shadow-sm p-1">
+      <nav class="flex flex-row items-center justify-between bg-white px-5">
+        <!-- Logo -->
+
+        <div class="items-center">
+          <a href="../index.html">
+            <img src="logoPims.png" alt="Logo" class="h-16 w-16 mr-2" />
+          </a>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="flex space-x-8">
+          <a href="../index.html" class="text-black">Home</a>
+
+          <!-- Generic Search Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Generic Search
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-56"
+            >
+              <ul>
+                <a href="./patSearch.html"
+                  ><li class="p-1 hover:bg-gray-100">Patient Search</li></a
+                >
+                <a href="./testProfiles.html"
+                  ><li class="p-1 hover:bg-gray-100">Test and Profiles</li></a
+                >
+                <a href="./QCGraph.html"
+                  ><li class="p-1 hover:bg-gray-100">Q.C. Graph</li></a
+                >
+                <a href="./statisticsReport.html"
+                  ><li class="p-1 hover:bg-gray-100">Statistic Report</li></a
+                >
+                <a href="./testConsumptionReport.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Test Consumption Report
+                  </li></a
+                >
+                <a href="./outOfRangeReport.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Out of Range Test Report
+                  </li></a
+                >
+                <a href="./orderTrackingCompletedResults.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Order Tracking/Completed Results for Ward/OPD
+                  </li></a
+                >
+                <a href="./orderTestsTimeManagement.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Order/Tests Time Management
+                  </li></a
+                >
+                <a href="./testCompletion.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Test Completion Report
+                  </li></a
+                >
+              </ul>
+            </div>
+          </div>
+
+          <!-- Revenue Reports Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Revenue Reports
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-56"
+            >
+              <ul>
+                <a href="./userWiseRevenueReport.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    User Wise Revenue Report
+                  </li></a
+                >
+                <a href="./priceSchedule.html"
+                  ><li class="p-1 hover:bg-gray-100">Price Schedule</li></a
+                >
+                <a href="./testWiseRevenue.html"
+                  ><li class="p-1 hover:bg-gray-100">Tests Wise Revenue</li></a
+                >
+                <a href="./receptionRevenueReport.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Reception Revenue Report
+                  </li></a
+                >
+                <a href="./paymentDescription.html"
+                  ><li class="p-1 hover:bg-gray-100">Payment Description</li></a
+                >
+                <a href="./sectionWiseRevenueSummary.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Sections Wise Revenue
+                  </li></a
+                >
+                <a href="./shareDistribution.html"
+                  ><li class="p-1 hover:bg-gray-100">Share Distribution</li></a
+                >
+                <a href="./costing.html"
+                  ><li class="p-1 hover:bg-gray-100">Costing</li></a
+                >
+              </ul>
+            </div>
+          </div>
+
+          <!-- Authority Files Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Authority Files
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-56"
+            >
+              <ul>
+                <a href="./testprofilePricesList.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Test/Profile Prices List
+                  </li></a
+                >
+                <a href="./testprofileDiscountsList.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Test/Profile Discounts List
+                  </li></a
+                >
+                <a href="./general.html"
+                  ><li class="p-1 hover:bg-gray-100">General</li></a
+                >
+                <a href="./group.html"
+                  ><li class="p-1 hover:bg-gray-100">Group</li></a
+                >
+                <a href="#"
+                  ><li class="p-1 hover:bg-gray-100">Test Definition</li></a
+                >
+                <a href="./testPrice.html"
+                  ><li class="p-1 hover:bg-gray-100">Test Price</li></a
+                >
+                <a href="#"
+                  ><li class="p-1 hover:bg-gray-100">Profile Definition</li></a
+                >
+                <a href="./profilePrice.html"
+                  ><li class="p-1 hover:bg-gray-100">Profile Price</li></a
+                >
+              </ul>
+            </div>
+          </div>
+
+          <!-- Patient Reports -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Patient Reports
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-72"
+            >
+              <ul>
+                <a href="./orderStatusBasedonTest.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Order Status Based on Tests
+                  </li></a
+                >
+                <a href="./orderStatusBasedonProfile.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Order Status Based on Profile
+                  </li></a
+                >
+                <a href="./immunologyPatientProfile.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Immunology Patient Profile Result
+                  </li></a
+                >
+                <a href="./testResultRangeWise.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Test Results - Range Wise
+                  </li></a
+                >
+                <a href="./labNoWiseSingleReport.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Lab No. Wise Single Report
+                  </li></a
+                >
+                <a href="./reportPrintStatus.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Reports Print Status by Order No/Range
+                  </li></a
+                >
+                <a href="./receptionReports.html"
+                  ><li class="p-1 hover:bg-gray-100">Reception Reports</li></a
+                >
+                <a href="./orderCompletionStatus.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Order Completion Status Based on Tests
+                  </li></a
+                >
+                <a href="./testOrderBasedOnSpecimen.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Test Order Based on Specimen
+                  </li></a
+                >
+                <a href="./testOrderBasedonDiagnosis.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Test Order Based on Diagnosis
+                  </li></a
+                >
+                <a href="./microbiology.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Micorbiology C/S - Report/Search
+                  </li></a
+                >
+                <a href="./testResultSummary.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Tests Results Summary
+                  </li></a
+                >
+                <a href="./patDetailReport.html"
+                  ><li class="p-1 hover:bg-gray-100">
+                    Patient Detail Reports
+                  </li></a
+                >
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tests Progress / Test Trend Graphs Dropdown -->
+          <div class="relative group">
+            <button
+              class="text-black group-hover:underline-offset-2 hover:underline hover:ease-in focus:outline-none"
+            >
+              Tests Progress
+              <svg
+                class="h-4 w-4 inline-block ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="absolute hidden bg-white text-black mt-2 p-2 space-y-2 rounded-md shadow-md z-10 w-44"
+            >
+              <ul>
+                <a href="./progressStatus.html"
+                  ><li class="p-1 hover:bg-gray-100">Progress Status</li></a
+                >
+                <a href="./testTrendGraphs.html"
+                  ><li class="p-1 hover:bg-gray-100">Test Trend Graphs</li></a
+                >
+                <a href="./immunologyReport.html"
+                  ><li class="p-1 hover:bg-gray-100">Immunology Report</li></a
+                >
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="sm:p-1 md:p-3 xxl:container p-5 font-sans">
+      <!-- Heading -->
+      <div class="flex flex-row justify-between my-3">
+        <div class="sm:mb-4 sm:text-left md:text-center md:my-2">
+          <p
+            class="sm:font-semibold sm:text-xl mb-2 md:text-xl ml-12 text-2xl font-bold underline underline-offset-8 align-middle"
+          >
+            Admssion Summary
+          </p>
+        </div>
+
+        <div class="flex gap-3">
+          <div>
+            <label
+              for="startDate"
+              class="sm:text-sm md:text-lg text-black text-md font-semibold tracking-wide"
+            >
+              From:
+            </label>
+            <input
+              name="startDate"
+              type="datetime-local"
+              value=""
+              class="sm:w-48 md:w-48 lg:w-48 xl:w-48 xxl:w-48 w-48 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+              id="startDateInput"
+            />
+          </div>
+          <div>
+            <label
+              for="endDate"
+              class="sm:text-sm md:text-lg text-black text-md font-semibold tracking-wide"
+            >
+              To:
+            </label>
+            <input
+              name="endDate"
+              type="datetime-local"
+              value=""
+              class="sm:w-48 md:w-48 lg:w-48 xl:w-48 xxl:w-48 w-48 form-control select-btn mt-1 px-1 py-1 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+              id="endDateInput"
+            />
+          </div>
+        </div>
+        <!-- Buttons for report type -->
+        <div
+          class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-4 justify-between"
+        >
+          <button
+            class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-red-500 p-1.5 mx-1 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
+            onclick="detailReport()"
+          >
+            Detail Report
+          </button>
+          <button
+            class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-blue-500 p-1.5 mx-1.5 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
+            onclick="report()"
+          >
+            Report
+          </button>
+          <button
+            class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-green-500 p-1.5 mx-1.5 text-green-500 rounded-lg hover:bg-green-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
+            onclick="summary()"
+          >
+            Summary
+          </button>
+          <button
+            class="sm:text-sm sm:p-1 sm:mx-5 sm:mb-2 rounded-3xl border-2 border-red-700 bg-red-700 px-5 py-1.5 text-white hover:bg-white hover:text-red-700 hover:border-2 hover:border-red-700 transition duration-100 delay-150 hover:delay-100"
+            id="btn_clear_me"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+
+      <!-- Search Box -->
+      <div class="bg-blue-300 my-4 p-5 rounded-lg" id="searchBox">
+        <div class="gap-3">
+          <!-- First Row -->
+          <form>
+            <div
+              class="grid grid-rows-4 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2"
+            >
+              <div
+                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <label
+                  for="name"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
+                  >Patient Name:</label
+                >
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                  placeholder="Patient Name"
+                />
+              </div>
+              <div
+                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="hospital"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Hospital:</label
+                  >
+                  <select
+                    multiple="multiple"
+                    class="combined-select"
+                    id="hospital"
+                  >
+                    <option value="hospital1">Hospital1</option>
+                    <option value="hospital2">Hospital2</option>
+                    <option value="hospital3">Hospital3</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="department"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Department:</label
+                  >
+                  <select
+                    multiple="multiple"
+                    class="combined-select"
+                    id="department"
+                  >
+                    <option value="dept1">Department1</option>
+                    <option value="dept2">Department2</option>
+                    <option value="dept3">Department3</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <label
+                  for="phone"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
+                  >Phone#:</label
+                >
+                <input
+                  id="phone"
+                  name="phone"
+                  type="number"
+                  class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                  placeholder="Phone#"
+                />
+              </div>
+              <div
+                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+              >
+                <div class="xl:w-64 xxl:w-64">
+                  <label
+                    for="paymentType"
+                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                    >Payment Type:</label
+                  >
+                  <select
+                    multiple="multiple"
+                    class="combined-select"
+                    id="paymentType"
+                  >
+                    <option value="poor">Poor</option>
+                    <option value="staff">PIMS Staff</option>
+                    <option value="entitled">Entitled</option>
+                  </select>
+                </div>
+              </div>
+              <div class="md:w-80 mb-5 xl:col-span-2 col-span-2">
+                <label
+                  for="mr"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
+                  >MRN:</label
+                >
+                <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
+                  <select
+                    name="rangeSelect"
+                    class="sm:w-60 lg:w-80 xl:w-80 rangeSelect px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  >
+                    <option
+                      value="Like"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Like
+                    </option>
+                    <option
+                      value="Range"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Range
+                    </option>
+                  </select>
+                  <input
+                    id="mr"
+                    name="mr"
+                    type="text"
+                    class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                    placeholder="MRN"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Result Box -->
+      <div class="sm:grid flex justify-between mb-7">
+        <p
+          class="sm:text-lg sm:mb-5 mt-2 font-semibold text-2xl underline underline-offset-8 align-middle"
+        >
+          Results
+        </p>
+        <!-- <div class="align-bottom">
+          <button
+            class="text-center bg-orange-400 font-bold px-5 py-2 rounded-lg text-black hover:bg-orange-200"
+          >
+            PDF
+          </button>
+          <button
+            class="text-center bg-lime-400 font-bold px-5 py-2 rounded-lg text-black hover:bg-lime-200"
+          >
+            CSV
+          </button>
+          <button
+            class="text-center bg-teal-400 font-bold px-5 py-2 rounded-lg text-black hover:bg-teal-200"
+          >
+            EXCEL
+          </button>
+        </div> -->
+      </div>
+      <!-- Results Table -->
+      <div class="resultsAll">
+        <div class="alertBox">
+          <div class="block align-middle bg-amber-100 p-5 border border-black">
+            To show reports click on respective button on the TOP RIGHT corner
+          </div>
+        </div>
+        <div
+          class="hidden summaryBox sm:overflow-x-auto md:overflow-x-auto lg:overflow-x-auto xl:overflow-x-auto"
+        >
+          <div
+            class="bg-slate-200 flex justify-center border border-black rounded-lg p-5 mb-4"
+          >
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >Total Patients</b
+                    >
+                  </td>
+                  <td>
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >Total Male</b
+                    >
+                  </td>
+                  <td>
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >Total Female</b
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >1020</span
+                    >
+                  </td>
+                  <td>
+                    <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >510</span
+                    >
+                  </td>
+                  <td>
+                    <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >510</span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div
+          class="detailReportBox hidden sm:overflow-x-auto md:overflow-x-auto lg:overflow-x-auto xl:overflow-x-auto xxl:overflow-x-auto"
+        >
+          <table
+            id="example"
+            class="table table-striped table-bordered"
+            style="width: 100%"
+          >
+            <thead>
+              <tr>
+                <th>Sr#</th>
+                <th>MRN</th>
+                <th>Visit#</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Admission Datetime</th>
+                <th>Entitlement Type</th>
+                <th>Hospital</th>
+                <th>Department</th>
+                <th>Ward</th>
+                <th>Bed</th>
+                <th>Consultant</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>123</td>
+                <td>23434242</td>
+                <td>2324924</td>
+                <td>ABCXYZ</td>
+                <td>23</td>
+                <td>Male</td>
+                <td>12/02/2024 11:23AM</td>
+                <td>Free</td>
+                <td>IH</td>
+                <td>EAR</td>
+                <td>Medical</td>
+                <td>12</td>
+                <td>Dr. ABC</td>
+              </tr>
+              <tr>
+                <td>123</td>
+                <td>23434242</td>
+                <td>2324924</td>
+                <td>ABCXYZ</td>
+                <td>23</td>
+                <td>Male</td>
+                <td>12/02/2024 11:23AM</td>
+                <td>Free</td>
+                <td>IH</td>
+                <td>EAR</td>
+                <td>Medical</td>
+                <td>12</td>
+                <td>Dr. ABC</td>
+              </tr>
+              <tr>
+                <td>123</td>
+                <td>23434242</td>
+                <td>2324924</td>
+                <td>ABCXYZ</td>
+                <td>23</td>
+                <td>Male</td>
+                <td>12/02/2024 11:23AM</td>
+                <td>Free</td>
+                <td>IH</td>
+                <td>EAR</td>
+                <td>Medical</td>
+                <td>12</td>
+                <td>Dr. ABC</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery Sumo Select-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="../js/jquery.sumoselect.min.js"></script>
+
+    <!-- DataTables and Buttons -->
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+
+    <!-- Your custom script -->
+    <script src="../js/script.js"></script>
+
+    <!-- SumoSelect Initialization -->
+    <script></script>
+  </body>
+</html>
