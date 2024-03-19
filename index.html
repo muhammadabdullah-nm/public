@@ -5,288 +5,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab Reports</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="input.css" />
   </head>
 
   <body>
+    <div class="bg-slate-100">
+      <nav class="flex flex-row items-center justify-between bg-white px-5">
+        <!-- Logo -->
+
+        <div class="items-center">
+          <img src="pages/logoPims.png" alt="Logo" class="h-20 w-20 mr-2" />
+        </div>
+
+        <div>
+          <p class="font-semibold text-2xl">STATISTICAL REPORTS</p>
+        </div>
+
+        <div class="items-center">
+          <img src="pages/nitb-green.png" alt="Logo" class="h-20 w-20 mr-2" />
+        </div>
+      </nav>
+    </div>
     <div class="ts">
       <div class="first">
-        <h2>Generic Search</h2>
+        <h2 class="font-bold text-2xl px-2 py-3">Generic Search</h2>
         <div class="text-left inner-cont">
-          <button
+          <a href="pages/patSearch.html" class="button active">
+            <div>Patient Search</div></a
+          >
+          <a href="pages/testProfiles.html" class="button active">
+            <div>Test and Profiles</div></a
+          >
+          <a href="pages/QCGraph.html" class="button active">
+            <div>Q.C. Graph</div></a
+          >
+          <a href="pages/statisticsReport.html" class="button active">
+            <div>Statistic Report</div></a
+          >
+          <a href="pages/testConsumptionReport.html" class="button active">
+            <div>Test Consumption Report</div></a
+          >
+          <a href="pages/outOfRangeReport.html" class="button active">
+            <div>Out of Range Test Report</div></a
+          >
+          <a
+            href="pages/orderTrackingCompletedResults.html"
             class="button active"
-            onclick="window.location.href = 'pages/patSearch.html';"
           >
-            Patient Search
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/testProfiles.html';"
+            <div>Order Tracking/Completed Results for Ward/OPD</div></a
           >
-            Test and Profiles
-          </button>
-          <!-- <button class="button">Poor Patients Declaration</button>-->
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/QCGraph.html';"
+          <a href="pages/orderTestsTimeManagement.html" class="button active">
+            <div>Order/Tests Time Management</div></a
           >
-            Q.C. Graph
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/statisticsReport.html';"
+          <a href="pages/testCompletion.html" class="button active">
+            <div>Test Completion Report</div></a
           >
-            Statistic Report
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/testConsumptionReport.html';"
-          >
-            Test Consumption Report
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/outOfRangeReport.html';"
-          >
-            Out of Range Test Report
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/orderTrackingCompletedResults.html';"
-          >
-            Order Tracking/Completed Results for Ward/OPD
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/orderTestsTimeManagement.html';"
-          >
-            Order/Tests Time Management
-          </button>
-          <button
-            class="button active"
-            onclick="window.location.href = 'pages/testCompletion.html';"
-          >
-            Test Completion Report
-          </button>
         </div>
-        <h2>Tests Progress / Test Trend Graphs</h2>
+        <h2 class="font-bold text-2xl px-2 py-3">
+          Tests Progress / Test Trend Graphs
+        </h2>
         <div class="text-left inner-cont">
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/progressStatus.html';"
+          <a href="pages/progressStatus.html" class="button active">
+            <div>Progress Status</div></a
           >
-            Progress Status
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/testTrendGraphs.html';"
+          <a href="pages/testTrendGraphs.html" class="button active">
+            <div>Test Trend Graphs</div></a
           >
-            Test Trend Graphs
-          </button>
-          <button
-            class="button active"
-            onclick="window.location.href = 'pages/immunologyReport.html';"
+          <a href="pages/immunologyReport.html" class="button active">
+            <div>Immunology Report</div></a
           >
-            Immunology Report
-          </button>
-          <button
-            class="button active"
-            onclick="window.location.href = 'pages/admissionSummary.html';"
+          <a href="pages/admissionSummary.html" class="button active">
+            <div>Admission Summary</div></a
           >
-            Admission Summary
-          </button>
         </div>
       </div>
       <div class="second">
-        <h2>Patient Reports</h2>
+        <h2 class="font-bold text-2xl px-2 py-3">Patient Reports</h2>
         <div class="text-left inner-cont">
-          <button
-            class="button active"
-            onclick="window.location.href = 'pages/abc.html';"
+          <a href="pages/abc.html" class="button active"> <div>ABC</div></a>
+          <a href="pages/orderStatusBasedonTest.html" class="button active">
+            <div>Order Status Based on Tests</div></a
           >
-            ABC
-          </button>
-          <button
-            class="button active"
-            onclick="window.location.href = 'pages/orderStatusBasedonTest.html';"
+          <a href="pages/orderStatusBasedonProfile.html" class="button active">
+            <div>Order Status Based on Profile</div></a
           >
-            Order Status Based on Tests
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/orderStatusBasedonProfile.html';"
+          <a href="pages/immunologyPatientProfile.html" class="button active">
+            <div>Immunology Patient Profile Result</div></a
           >
-            Order Status Based on Profile
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/immunologyPatientProfile.html';"
+          <a href="pages/testResultRangeWise.html" class="button active">
+            <div>Test Results - Range Wise</div></a
           >
-            Immunology Patient Profile Result
-          </button>
-          <button
-            class="button active"
-            onclick="window.location.href = 'pages/testResultRangeWise.html';"
+          <a href="pages/labNoWiseSingleReport.html" class="button active">
+            <div>Lab No. Wise Single Report</div></a
           >
-            Test Results - Range Wise
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/labNoWiseSingleReport.html';"
+          <a href="pages/reportPrintStatus.html" class="button active">
+            <div>Reports Print Status by Order No/Range</div></a
           >
-            Lab No. Wise Single Report
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/reportPrintStatus.html';"
+          <a href="pages/receptionReports.html" class="button active">
+            <div>Reception Reports</div></a
           >
-            Reports Print Status by Order No/Range
-          </button>
-          <button
-            class="button active"
-            onclick="window.location.href = 'pages/receptionReports.html';"
+          <a href="pages/orderCompletionStatus.html" class="button active">
+            <div>Order Completion Status Based on Tests</div></a
           >
-            Reception Reports
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/orderCompletionStatus.html';"
+          <a href="pages/testOrderBasedOnSpecimen.html" class="button active">
+            <div>Test Order Based on Specimen</div></a
           >
-            Order Completion Status Based on Tests
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/testOrderBasedOnSpecimen.html';"
+          <a href="pages/testOrderBasedonDiagnosis.html" class="button active">
+            <div>Test Order Based on Diagnosis</div></a
           >
-            Test Order Based on Specimen
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/testOrderBasedonDiagnosis.html';"
+          <a href="pages/microbiology.html" class="button active">
+            <div>Micorbiology C/S - Report/Search</div></a
           >
-            Test Order Based on Diagnosis
-          </button>
-          <button
-            class="button active"
-            onclick="window.location.href = 'pages/microbiology.html';"
+          <a href="pages/testResultSummary.html" class="button active">
+            <div>Tests Results Summary</div></a
           >
-            Micorbiology C/S - Report/Search
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/testResultSummary.html';"
+          <a href="pages/patDetailReport.html" class="button active">
+            <div>Patient Detail Reports</div></a
           >
-            Tests Results Summary
-          </button>
-          <button
-            class="button active"
-            onclick="window.location.href = 'pages/patDetailReport.html';"
-          >
-            Patient Detail Reports
-          </button>
         </div>
       </div>
       <div class="third">
-        <h2>Authority Files</h2>
+        <h2 class="font-bold text-2xl px-2 py-3">Authority Files</h2>
         <div class="text-left inner-cont">
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/testprofilePricesList.html';"
+          <a href="pages/testprofilePricesList.html" class="button active">
+            <div>Test/Profile Prices List</div></a
           >
-            Test/Profile Prices List
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/testprofileDiscountsList.html';"
+          <a href="pages/testprofileDiscountsList.html" class="button active">
+            <div>Test/Profile Discounts List</div></a
           >
-            Test/Profile Discounts List
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/general.html';"
+          <a href="pages/general.html" class="button active">
+            <div>General</div></a
           >
-            General
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/group.html';"
+          <a href="pages/group.html" class="button active"> <div>Group</div></a>
+          <a href="pages/testDefinition.html" class="button active">
+            <div>Test Definition</div></a
           >
-            Group
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/testDefinition.html';"
+          <a href="pages/testPrice.html" class="button active">
+            <div>Test Price</div></a
           >
-            Test Definition
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/testPrice.html';"
+          <a href="pages/profileDefinition.html" class="button active">
+            <div>Profile Definition</div></a
           >
-            Test Price
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/profileDefinition.html';"
+          <a href="pages/profilePrice.html" class="button active">
+            <div>Profile Price</div></a
           >
-            Profile Definition
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/profilePrice.html';"
-          >
-            Profile Price
-          </button>
         </div>
-        <h2>Revenue Reports</h2>
+        <h2 class="font-bold text-2xl px-2 py-3">Revenue Reports</h2>
         <div class="text-left inner-cont">
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/userWiseRevenueReport.html';"
+          <a href="pages/userWiseRevenueReport.html" class="button active">
+            <div>User Wise Revenue Report</div></a
           >
-            User Wise Revenue Report
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/priceSchedule.html';"
+          <a href="pages/priceSchedule.html" class="button active">
+            <div>Price Schedule</div></a
           >
-            Price Schedule
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/testWiseRevenue.html';"
+          <a href="pages/testWiseRevenue.html" class="button active">
+            <div>Tests Wise Revenue</div></a
           >
-            Tests Wise Revenue
-          </button>
-          <button
-            class="button active"
-            onclick="window.location.href = 'pages/receptionRevenueReport.html';"
+          <a href="pages/receptionRevenueReport.html" class="button active">
+            <div>Reception Revenue Report</div></a
           >
-            Reception Revenue Report
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/paymentDescription.html';"
+          <a href="pages/paymentDescription.html" class="button active">
+            <div>Payment Description</div></a
           >
-            Payment Description
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/sectionWiseRevenueSummary.html';"
+          <a href="pages/sectionWiseRevenueSummary.html" class="button active">
+            <div>Sections Wise Revenue</div></a
           >
-            Sections Wise Revenue
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/shareDistribution.html';"
+          <a href="pages/shareDistribution.html" class="button active">
+            <div>Share Distribution</div></a
           >
-            Share Distribution
-          </button>
-          <button
-            class="button"
-            onclick="window.location.href = 'pages/costing.html';"
+          <a href="pages/costing.html" class="button active">
+            <div>Costing</div></a
           >
-            Costing
-          </button>
         </div>
       </div>
     </div>

@@ -46,43 +46,41 @@ var divSummary = document.getElementsByClassName("summaryBox")[0]; // Assuming t
 var divTable = document.getElementsByClassName("detailReportBox")[0]; // Assuming there is only one element with the class "detailReportBox"
 
 // -----------------------CLEAR BUTTON --------------------------
-// Store references to elements
 const searchBox = document.getElementById("searchBox");
 const daterange = document.getElementById("daterange");
 
 const element = document.getElementById("btn_clear_me");
 element.addEventListener("click", function () {
-  // Find the searchBox element
+  // Find all SumoSelect dropdown elements
+  const sumoSelects = document.querySelectorAll(".SumoSelect");
 
-  // Check if searchBox element exists
+  // Iterate over each SumoSelect dropdown
+  sumoSelects.forEach((sumoSelect) => {
+    // Find the select element within the SumoSelect dropdown
+    const selectElement = sumoSelect.querySelector("select");
+
+    // Deselect all options in the select element
+    const options = selectElement.querySelectorAll("option");
+    options.forEach((option) => {
+      option.selected = false;
+    });
+
+    // Reset the caption text and input value
+    const caption = sumoSelect.querySelector(".placeholder");
+    const input = sumoSelect.querySelector(".search-txt");
+    caption.textContent = "Select Here";
+    input.value = "";
+  });
+
+  // Clear other inputs and hide elements as needed
   if (searchBox) {
     // Find all input elements within the searchBox
     const inputs = searchBox.querySelectorAll("input");
-
-    var today = new Date();
-    // Function to format the date in the desired format
-    function formatDate(date) {
-      var day = ("0" + date.getDate()).slice(-2);
-      var month = ("0" + (date.getMonth() + 1)).slice(-2);
-      var year = date.getFullYear();
-      var hours = ("0" + date.getHours()).slice(-2);
-      var minutes = ("0" + date.getMinutes()).slice(-2);
-
-      return day + "/" + month + "/" + year + " " + hours + ":" + minutes;
-    }
-
-    // Get the current date and format it
-    var startDate = formatDate(today);
-    // Assuming you want the end date to be the same as the start date for this example
-    var endDate = formatDate(today);
-    // Combine start and end dates in the desired format
-    var formattedDate = startDate + " - " + endDate;
 
     // Iterate over the inputs and clear their values
     inputs.forEach((input) => {
       input.value = "";
     });
-    daterange.value = formattedDate;
 
     divAlert.classList.remove("hidden");
     divSummary.classList.add("hidden");
@@ -143,9 +141,9 @@ mrrangeSelect.on("change", function () {
   if ($(this).val() === "Range") {
     $(this).after(
       "<div id='fromToMR' class='sm:grid md:grid lg:grid xl:grid flex justify-between'>" +
-        "<input id='fromMR' name='fromMR' type='text' class='sm:ml-0 sm:w-60 md:ml-0 md:w-80 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 ml-2 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' placeholder='From MRN' />" +
+        "<input id='fromMR' name='fromMR' type='text' class='sm:w-60 md:w-56 lg:w-56 xl:w-56 xxl:w-48 mr-3 mt-1 px-1 py-0.5 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' placeholder='From MRN' />" +
         "<p id='toText' style='padding: 10px'> To </p> " +
-        "<input id='toMR' name='toMR' type='text' class='sm:ml-0 sm:w-60 md:w-80 lg:ml-0 lg:w-80 xl:w-80 w-56 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' placeholder='To MRN' />" +
+        "<input id='toMR' name='toMR' type='text' class='sm:w-60 md:w-56 lg:w-56 xl:w-56 xxl:w-48 mr-3 mt-1 px-1 py-0.5 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' placeholder='To MRN' />" +
         "</div>"
     );
   } else if ($(this).val() === "Like") {
@@ -162,9 +160,9 @@ receiptRangeSelect.on("change", function () {
   if ($(this).val() === "Range") {
     $(this).after(
       "<div id='fromToReceipt' class='sm:grid md:grid lg:grid xl:grid flex justify-between'>" +
-        "<input id='fromReceipt' name='fromReceipt' type='text' class='sm:ml-0 sm:w-60 md:ml-0 md:w-80 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 ml-2 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' placeholder='From Receipt' />" +
+        "<input id='fromReceipt' name='fromReceipt' type='text' class='sm:w-60 md:w-56 lg:w-56  xl:w-56 xxl:w-48 mr-3 mt-1 px-1 ml-2 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' placeholder='From Receipt' />" +
         "<p id='toText' style='padding: 10px'> To </p> " +
-        "<input id='toReceipt' name='toReceipt' type='text' class='sm:ml-0 sm:w-60 md:w-80 lg:ml-0 lg:w-80 xl:w-80 w-56 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' placeholder='To Receipt' />" +
+        "<input id='toReceipt' name='toReceipt' type='text' class='sm:w-60 md:w-56 lg:w-56  xl:w-56 xxl:w-48 mr-3 mt-1 px-1 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' placeholder='To Receipt' />" +
         "</div>"
     );
   } else if ($(this).val() === "Like") {
@@ -181,15 +179,15 @@ orderRangeSelector.on("change", function () {
   if ($(this).val() === "Range") {
     $(this).after(
       "<div id='fromToOrder' class='sm:grid md:grid lg:grid xl:grid flex justify-between'>" +
-        "<input id='fromOrder' name='fromOrder' type='text'  placeholder='From Order' class='sm:ml-0 sm:w-60 md:ml-0 md:w-80 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 ml-2 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' />" +
+        "<input id='fromOrder' name='fromOrder' type='text'  placeholder='From Order' class='sm:w-60 md:w-56 lg:w-56  xl:w-56 xxl:w-48 mr-3 mt-1 px-1 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' />" +
         "<p id='toText' style='padding: 10px'> To </p> " +
-        "<input id='toOrder' name='toOrder' type='text' placeholder='To Order' class='sm:ml-0 sm:w-60 md:w-80 lg:ml-0 lg:w-80 xl:w-80 w-56 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' />" +
+        "<input id='toOrder' name='toOrder' type='text' placeholder='To Order' class='sm:w-60 md:w-56 lg:w-56 xl:w-56 xxl:w-48 mr-3 mt-1 px-1 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' />" +
         "</div>"
     );
   } else if ($(this).val() === "Like") {
     to.remove();
     $(this).after(
-      "<input id='Order' name='Order' type='text' placeholder='MRN'  class='sm:ml-0 sm:w-60 md:w-80 md:ml-0 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 mt-1 ml-2 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' />"
+      "<input id='Order' name='Order' type='text' placeholder='Order'  class='sm:ml-0 sm:w-60 md:w-80 md:ml-0 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 mt-1 ml-2 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' />"
     );
   }
 });
@@ -200,9 +198,9 @@ argeRangeSelector.on("change", function () {
   if ($(this).val() === "Range") {
     $(this).after(
       "<div id='fromToAge' class='sm:grid md:grid lg:grid xl:grid flex justify-between'>" +
-        "<input id='fromAge' name='fromAge' type='text' class='sm:ml-0 sm:w-60 md:ml-0 md:w-80 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 ml-2 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' placeholder='From Age' />" +
+        "<input id='fromAge' name='fromAge' type='text' class='sm:w-60 md:w-56 lg:w-56  xl:w-56 xxl:w-48 mr-3 mt-1 px-1 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' placeholder='From Age' />" +
         "<p id='toText' style='padding: 10px'> To </p> " +
-        "<input id='toAge' name='toAge' type='text' class='sm:ml-0 sm:w-60 md:w-80 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 mt-1 w-56 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' placeholder='To Age' />" +
+        "<input id='toAge' name='toAge' type='text' class='sm:w-60 md:w-56 lg:w-56 xl:w-56 xxl:w-48 mr-3 mt-1 px-1 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' placeholder='To Age' />" +
         "</div>"
     );
   } else if ($(this).val() === "Like") {

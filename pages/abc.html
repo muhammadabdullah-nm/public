@@ -13,8 +13,17 @@
 
     <script src="../js/jquery.min.js"></script>
     <script src="../js/jquery.sumoselect.min.js"></script>
-    <title>Costing</title>
+    <title>Test Completion</title>
   </head>
+  <style>
+    /* Add your custom styles here */
+    .none {
+      display: none;
+    }
+    .show {
+      display: grid;
+    }
+  </style>
   <body class="mt-0 pt-0 bg-white">
     <div class="bg-slate-100 border-b shadow-sm p-1">
       <nav class="flex flex-row items-center justify-between bg-white px-5">
@@ -202,13 +211,13 @@
                 <a href="#"
                   ><li class="p-1 hover:bg-gray-100">Test Definition</li></a
                 >
-                <a href="#"
+                <a href="./testPrice.html"
                   ><li class="p-1 hover:bg-gray-100">Test Price</li></a
                 >
                 <a href="#"
                   ><li class="p-1 hover:bg-gray-100">Profile Definition</li></a
                 >
-                <a href="#"
+                <a href="./profilePrice.html"
                   ><li class="p-1 hover:bg-gray-100">Profile Price</li></a
                 >
               </ul>
@@ -352,12 +361,14 @@
 
     <div class="sm:p-1 md:p-3 xxl:container p-5 font-sans">
       <!-- Heading -->
-      <div class="flex flex-row justify-between my-3">
-        <div class="sm:mb-4 sm:text-left md:text-center md:my-2">
+      <div
+        class="flex justify-between md:grid md:grid-rows-3 md:gap-y-5 md:justify-center md:text-center lg:flex lg:justify-between xl:flex xl:justify-between xxl:flex xxl:justify-between xxxl:flex xxxl:justify-between xxxxl:flex xxxxl:justify-between"
+      >
+        <div class="sm:mb-4 sm:text-left md:text-left md:my-2">
           <p
-            class="sm:font-semibold sm:text-xl mb-2 md:text-xl ml-12 text-2xl font-bold underline underline-offset-8 align-middle"
+            class="sm:font-semibold sm:text-xl mb-2 md:text-lg lg:text-xl text-xl ml-12 font-bold underline underline-offset-8 align-middle"
           >
-            Costing
+            Test Completion
           </p>
         </div>
 
@@ -398,19 +409,19 @@
           class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-4 justify-between"
         >
           <button
-            class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-red-500 p-1.5 mx-1 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
+            class="sm:text-sm sm:p-1 sm:mb-2 md:text-sm md:p-1 bg-white border-2 border-red-500 p-1.5 mx-1 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
             onclick="detailReport()"
           >
             Detail Report
           </button>
           <button
-            class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-blue-500 p-1.5 mx-1.5 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
+            class="sm:text-sm sm:p-1 sm:mb-2 md:text-sm md:p-1 bg-white border-2 border-blue-500 p-1.5 mx-1.5 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
             onclick="report()"
           >
             Report
           </button>
           <button
-            class="sm:text-sm sm:p-1 sm:mb-2 md:text-lg md:p-2 bg-white border-2 border-green-500 p-1.5 mx-1.5 text-green-500 rounded-lg hover:bg-green-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
+            class="sm:text-sm sm:p-1 sm:mb-2 md:text-sm md:p-1 bg-white border-2 border-green-500 p-1.5 mx-1.5 text-green-500 rounded-lg hover:bg-green-500 hover:text-white transition duration-100 delay-150 hover:delay-100"
             onclick="summary()"
           >
             Summary
@@ -428,251 +439,372 @@
       <div class="bg-blue-300 my-4 p-5 rounded-lg" id="searchBox">
         <div class="gap-3">
           <!-- First Row -->
-          <form>
-            <div
-              class="grid grid-rows-4 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2"
-            >
+          <form action="">
+            <!-- MRN and Order# -->
+            <div class="grid-cols-2 grid">
               <div
-                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+                class="grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 xxl:grid-cols-4 xxxl:grid-cols-4 xxxxl:grid-cols-4 grid gap-3"
               >
-                <div class="xl:w-64 xxl:w-64">
+                <div
+                  class="md:w-80 mb-5 sm:col-span-2 md:col-span-2 lg:col-span-2 xl:col-span-1 col-span-2"
+                >
                   <label
-                    for="paymentType"
-                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Payment Type:
-                  </label>
-                  <select multiple="multiple" class="combined-select">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                    <option value="bmw">BMW</option>
-                    <option value="porsche">Porche</option>
-                    <option value="ferrari">Ferrari</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                  </select>
+                    for="mr"
+                    class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
+                    >MRN:</label
+                  >
+                  <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
+                    <select
+                      name="rangeSelect"
+                      class="sm:w-60 lg:w-80 xl:w-80 rangeSelect px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    >
+                      <option
+                        value="Like"
+                        class="text-gray-700 block px-4 py-2 text-sm"
+                      >
+                        Like
+                      </option>
+                      <option
+                        value="Range"
+                        class="text-gray-700 block px-4 py-2 text-sm"
+                      >
+                        Range
+                      </option>
+                    </select>
+                    <input
+                      id="mr"
+                      name="mr"
+                      type="text"
+                      class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                      placeholder="MRN"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="md:w-80 mb-5 sm:col-span-2 md:col-span-2 lg:col-span-2 xl:col-span-1 col-span-2"
+                >
+                  <label
+                    for="order"
+                    class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide"
+                    >Order#:</label
+                  >
+                  <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
+                    <select
+                      name="rangeSelectOrder"
+                      class="sm:w-60 lg:w-80 xl:w-80 rangeSelectOrder px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    >
+                      <option
+                        value="Like"
+                        class="text-gray-700 block px-4 py-2 text-sm"
+                      >
+                        Like
+                      </option>
+                      <option
+                        value="Range"
+                        class="text-gray-700 block px-4 py-2 text-sm"
+                      >
+                        Range
+                      </option>
+                    </select>
+                    <input
+                      id="order"
+                      name="order"
+                      type="text"
+                      class="sm:w-60 sm:ml-0 md:w-80 md:ml-0 lg:w-80 lg:ml-0 xl:w-80 xl:ml-0 w-56 mt-1 px-3 py-2 ml-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                      placeholder="Order#"
+                    />
+                  </div>
                 </div>
               </div>
-              <div
-                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <div class="xl:w-64 xxl:w-64">
-                  <label
-                    for="paymentType"
-                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Payment Type:
-                  </label>
-                  <select multiple="multiple" class="combined-select">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                    <option value="bmw">BMW</option>
-                    <option value="porsche">Porche</option>
-                    <option value="ferrari">Ferrari</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                  </select>
+              <!-- Dropdown Button -->
+              <div class="relative">
+                <div class="">
+                  <button
+                    type="button"
+                    id="dropdownBtn"
+                    class="absolute top-50 right-0 lg:top-10"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      version="1.1"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 256 256"
+                      xml:space="preserve"
+                    >
+                      <defs></defs>
+                      <g
+                        style="
+                          stroke: none;
+                          stroke-width: 0;
+                          stroke-dasharray: none;
+                          stroke-linecap: butt;
+                          stroke-linejoin: miter;
+                          stroke-miterlimit: 10;
+                          fill: none;
+                          fill-rule: nonzero;
+                          opacity: 1;
+                        "
+                        transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+                      >
+                        <path
+                          d="M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z"
+                          style="
+                            stroke: none;
+                            stroke-width: 1;
+                            stroke-dasharray: none;
+                            stroke-linecap: butt;
+                            stroke-linejoin: miter;
+                            stroke-miterlimit: 10;
+                            fill: rgb(0, 0, 0);
+                            fill-rule: nonzero;
+                            opacity: 1;
+                          "
+                          transform=" matrix(1 0 0 1 0 0) "
+                          stroke-linecap="round"
+                        />
+                      </g>
+                    </svg>
+                  </button>
                 </div>
-              </div>
-              <div
-                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <div class="xl:w-64 xxl:w-64">
-                  <label
-                    for="paymentType"
-                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Payment Type:
-                  </label>
-                  <select multiple="multiple" class="combined-select">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                    <option value="bmw">BMW</option>
-                    <option value="porsche">Porche</option>
-                    <option value="ferrari">Ferrari</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                  </select>
-                </div>
-              </div>
-              <div
-                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <div class="xl:w-64 xxl:w-64">
-                  <label
-                    for="paymentType"
-                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Payment Type:
-                  </label>
-                  <select multiple="multiple" class="combined-select">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                    <option value="bmw">BMW</option>
-                    <option value="porsche">Porche</option>
-                    <option value="ferrari">Ferrari</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                  </select>
-                </div>
-              </div>
-              <div
-                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <div class="xl:w-64 xxl:w-64">
-                  <label
-                    for="paymentType"
-                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Payment Type:
-                  </label>
-                  <select multiple="multiple" class="combined-select">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                    <option value="bmw">BMW</option>
-                    <option value="porsche">Porche</option>
-                    <option value="ferrari">Ferrari</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                  </select>
-                </div>
-              </div>
-              <div
-                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <div class="xl:w-64 xxl:w-64">
-                  <label
-                    for="paymentType"
-                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Payment Type:
-                  </label>
-                  <select multiple="multiple" class="combined-select">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                    <option value="bmw">BMW</option>
-                    <option value="porsche">Porche</option>
-                    <option value="ferrari">Ferrari</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                  </select>
-                </div>
-              </div>
-              <div
-                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <div class="xl:w-64 xxl:w-64">
-                  <label
-                    for="paymentType"
-                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Payment Type:
-                  </label>
-                  <select multiple="multiple" class="combined-select">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                    <option value="bmw">BMW</option>
-                    <option value="porsche">Porche</option>
-                    <option value="ferrari">Ferrari</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                  </select>
-                </div>
-              </div>
-              <div
-                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <div class="xl:w-64 xxl:w-64">
-                  <label
-                    for="paymentType"
-                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Payment Type:
-                  </label>
-                  <select multiple="multiple" class="combined-select">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                    <option value="bmw">BMW</option>
-                    <option value="porsche">Porche</option>
-                    <option value="ferrari">Ferrari</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                  </select>
-                </div>
-              </div>
-              <div
-                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
-              >
-                <div class="xl:w-64 xxl:w-64">
-                  <label
-                    for="paymentType"
-                    class="sm:text-sm md:text-lg mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Payment Type:
-                  </label>
-                  <select multiple="multiple" class="combined-select">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                    <option value="bmw">BMW</option>
-                    <option value="porsche">Porche</option>
-                    <option value="ferrari">Ferrari</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                  </select>
+                <div
+                  id="display-content"
+                  class="none grid grid-rows-5 grid-cols-4 gap-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 xxxl:grid-cols-4 xxxxl:grid-cols-4"
+                >
+                  <div
+                    class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+                  >
+                    <div id="">
+                      <label
+                        for="department"
+                        class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                        >Department:</label
+                      >
+                      <select
+                        multiple="multiple"
+                        class="combined-select"
+                        id="department"
+                      >
+                        <option value="dept1">Dept1</option>
+                        <option value="dept2">Dept2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+                  >
+                    <div id="">
+                      <label
+                        for="sampleType"
+                        class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                        >Sample Type:</label
+                      >
+                      <select
+                        multiple="multiple"
+                        class="combined-select"
+                        id="sampleType"
+                      >
+                        <option value="serum">Serum</option>
+                        <option value="abc">abc</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+                  >
+                    <div id="">
+                      <label
+                        for="orderedBy"
+                        class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                        >Ordered By:</label
+                      >
+                      <select
+                        multiple="multiple"
+                        class="combined-select"
+                        id="orderedBy"
+                      >
+                        <option value="dr1">Dr1</option>
+                        <option value="dr2">Dr2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+                  >
+                    <label
+                      for="name"
+                      class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
+                      >Name:</label
+                    >
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      class="sm:w-60 md:w-80 lg:w-100 xl:w-80 xxl:w-72 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                      placeholder="Name"
+                    />
+                  </div>
+                  <div
+                    class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+                  >
+                    <div id="">
+                      <label
+                        for="ward"
+                        class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                        >Ward:</label
+                      >
+                      <select
+                        multiple="multiple"
+                        class="combined-select"
+                        id="ward"
+                      >
+                        <option value="ward1">Ward1</option>
+                        <option value="ward2">Ward2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+                  >
+                    <div class="xl:w-64 xxl:w-64">
+                      <div id="">
+                        <label
+                          for="profileName"
+                          class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                          >Profile Name:</label
+                        >
+                        <select
+                          multiple="multiple"
+                          class="combined-select"
+                          id="profileName"
+                        >
+                          <option value="abc">ABC</option>
+                          <option value="xyz">XYZ</option>
+                          <option value="efg">EFG</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+                  >
+                    <div id="">
+                      <label
+                        for="labNoEntered"
+                        class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                        >Lab Number Entered By:</label
+                      >
+                      <select
+                        multiple="multiple"
+                        class="combined-select"
+                        id="labNoEntered"
+                      >
+                        <option value="dr1">Dr1</option>
+                        <option value="dr2">Dr2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+                  >
+                    <div id="">
+                      <label
+                        for="diagnosis"
+                        class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                        >Diagnosis:</label
+                      >
+                      <select
+                        multiple="multiple"
+                        class="combined-select"
+                        id="diagnosis"
+                      >
+                        <option value="diagnosis1">Diagnosis1</option>
+                        <option value="diagnosis2">Diagnosis2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+                  >
+                    <div id="">
+                      <label
+                        for="result"
+                        class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                        >Result:</label
+                      >
+                      <select
+                        multiple="multiple"
+                        class="combined-select"
+                        id="result"
+                      >
+                        <option value="both">Both</option>
+                        <option value="positive">Positive</option>
+                        <option value="negative">Negative</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+                  >
+                    <div id="">
+                      <label
+                        for="reportCompletionStatus"
+                        class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                        >Report Completion Status:</label
+                      >
+                      <select
+                        multiple="multiple"
+                        class="combined-select"
+                        id="reportCompletionStatus"
+                      >
+                        <option value="both">Both</option>
+                        <option value="complete">Complete</option>
+                        <option value="incomplete">Incomplete</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+                  >
+                    <div id="">
+                      <label
+                        for="resultsEnteredBy"
+                        class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                        >Results Entered By:</label
+                      >
+                      <select
+                        multiple="multiple"
+                        class="combined-select"
+                        id="resultsEnteredBy"
+                      >
+                        <option value="dr1">dr1</option>
+                        <option value="dr2">dr2</option>
+                        <option value="dr3">dr3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
+                  >
+                    <div id="">
+                      <label
+                        for="commentsEnteredBy"
+                        class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
+                        >Comments Entered By:</label
+                      >
+                      <select
+                        multiple="multiple"
+                        class="combined-select"
+                        id="commentsEnteredBy"
+                      >
+                        <option value="dr1">dr1</option>
+                        <option value="dr2">dr2</option>
+                        <option value="dr3">dr3</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -681,13 +813,13 @@
       </div>
 
       <!-- Result Box -->
-      <div class="sm:grid flex justify-between mb-3">
+      <div class="sm:grid flex justify-between mb-7">
         <p
           class="sm:text-lg sm:mb-5 mt-2 font-semibold text-2xl underline underline-offset-8 align-middle"
         >
           Results
         </p>
-        <!-- <div class="align-bottom">
+        <div class="align-bottom">
           <button
             class="text-center bg-orange-400 font-bold px-5 py-2 rounded-lg text-black hover:bg-orange-200"
           >
@@ -703,9 +835,10 @@
           >
             EXCEL
           </button>
-        </div> -->
+        </div>
       </div>
       <!-- Results Table -->
+
       <div class="resultsAll">
         <div class="alertBox">
           <div class="block align-middle bg-amber-100 p-5 border border-black">
@@ -723,34 +856,94 @@
                 <tr>
                   <td>
                     <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >Section</b
+                      >Department</b
                     >
                   </td>
                   <td>
                     <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >Profiles</b
+                      >Total Visits</b
                     >
                   </td>
                   <td>
                     <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >Tests</b
+                      >Male</b
+                    >
+                  </td>
+                  <td>
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >Female</b
+                    >
+                  </td>
+                  <td>
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >Profile/Test</b
+                    >
+                  </td>
+                  <td>
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >Completed</b
+                    >
+                  </td>
+                  <td>
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >Incomplete</b
+                    >
+                  </td>
+                  <td>
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >Pending</b
+                    >
+                  </td>
+                  <td>
+                    <b class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >Rejected</b
                     >
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >Chemistry</span
+                      >667</span
                     >
                   </td>
                   <td>
                     <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >12</span
+                      >667</span
                     >
                   </td>
                   <td>
                     <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
-                      >40</span
+                      >667</span
+                    >
+                  </td>
+                  <td>
+                    <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >667</span
+                    >
+                  </td>
+                  <td>
+                    <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >667</span
+                    >
+                  </td>
+                  <td>
+                    <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >667</span
+                    >
+                  </td>
+                  <td>
+                    <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >667</span
+                    >
+                  </td>
+                  <td>
+                    <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >667</span
+                    >
+                  </td>
+                  <td>
+                    <span class="flex justify-between sm:mr-3 md:mr-7 mr-5"
+                      >667</span
                     >
                   </td>
                 </tr>
@@ -759,7 +952,7 @@
           </div>
         </div>
         <div
-          class="detailReportBox hidden sm:overflow-x-auto md:overflow-x-auto lg:overflow-x-auto xl:overflow-x-auto xxl:overflow-x-auto"
+          class="detailReportBox hidden sm:overflow-x-auto md:overflow-x-auto lg:overflow-x-auto xl:overflow-x-auto xxl:overflow-x-auto overflow-x-auto"
         >
           <table
             id="example"
@@ -768,79 +961,123 @@
           >
             <thead>
               <tr>
-                <th colspan="7">
-                  <div
-                    class="flex justify-between text-white font-medium text-lg"
-                  >
-                    <span>Entitled (Payment Type)</span>
-                  </div>
-                </th>
-              </tr>
-              <tr>
-                <th>Chemistry (Section Name)</th>
-                <th>Rate/Test</th>
-                <th>Cost/Test</th>
-                <th>No. of Test</th>
-                <th>Rev. Generate</th>
-                <th>Total Cost</th>
-                <th>Balance</th>
+                <th>Test Completion Status</th>
+                <th>Date & Time</th>
+                <th>MRN</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Ward/OPD</th>
+                <th>Profile/Test</th>
+                <th>Sample Type</th>
+                <th>Lab#</th>
+                <th>Ordered By User</th>
+                <th>Time Elapsed till Lab# Allotment (Minutes)</th>
+                <th>Results Entered by User</th>
+                <th>Results Verified by User</th>
+                <th>Time Elapsed till Result Entry (Minutes)</th>
+                <th>Commented by User</th>
+                <th>Total Time Elapsed (Minutes)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Arterial Blood Gases</td>
-                <td>0</td>
-                <td>0</td>
-                <td>10</td>
-                <td>3</td>
-                <td>240</td>
-                <td>240</td>
+                <td class="hyperlink">
+                  <a href="#">
+                    <span class="bg-green-700 px-3 py-1 rounded-full text-white"
+                      >Completed</span
+                    ></a
+                  >
+                </td>
+                <td>23/11/2023 13:44pm</td>
+                <td>032023000109</td>
+                <td>Muhammad N</td>
+                <td>Pathology</td>
+                <td>Medical Ward</td>
+                <td>Profile A</td>
+                <td>SampleType1</td>
+                <td>LabABC</td>
+                <td>XYZ 19/02/2023 09:23am</td>
+                <td>20</td>
+                <td>ABC 17/02/2023 7:39pm</td>
+                <td>ABC 18/03/2023 8:29pm</td>
+                <td>40</td>
+                <td>WABC 23/042022 11:11pm</td>
+                <td>70 (Minutes)</td>
               </tr>
               <tr>
-                <td>Arterial Blood Gases</td>
-                <td>0</td>
-                <td>0</td>
-                <td>10</td>
-                <td>3</td>
-                <td>240</td>
-                <td>240</td>
+                <td class="hyperlink">
+                  <a href="#">
+                    <span class="bg-red-700 px-3 py-1 rounded-full text-white"
+                      >Rejected</span
+                    ></a
+                  >
+                </td>
+                <td>Christina Berglund</td>
+                <td>Sweden</td>
+                <td>Sweden</td>
+                <td>Sweden</td>
+                <td>Sweden</td>
+                <td>Sweden</td>
+                <td>Sweden</td>
+                <td>Sweden</td>
+                <td>Sweden</td>
+                <td>Sweden</td>
+                <td>Sweden</td>
+                <td>Sweden</td>
+                <td>Sweden</td>
+                <td>Sweden</td>
+                <td>Sweden</td>
               </tr>
               <tr>
-                <td>Arterial Blood Gases</td>
-                <td>0</td>
-                <td>0</td>
-                <td>10</td>
-                <td>3</td>
-                <td>240</td>
-                <td>240</td>
+                <td class="hyperlink">
+                  <a href="#">
+                    <span class="bg-blue-700 px-3 py-1 rounded-full text-white"
+                      >Pending</span
+                    ></a
+                  >
+                </td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+                <td>Mexico</td>
+                <td>Mexico</td>
+                <td>Mexico</td>
+                <td>Mexico</td>
+                <td>Mexico</td>
+                <td>Mexico</td>
+                <td>Mexico</td>
+                <td>Mexico</td>
+                <td>Mexico</td>
+                <td>Mexico</td>
+                <td>Mexico</td>
+                <td>Mexico</td>
+                <td>Mexico</td>
               </tr>
               <tr>
-                <td>Arterial Blood Gases</td>
-                <td>0</td>
-                <td>0</td>
-                <td>10</td>
-                <td>3</td>
-                <td>240</td>
-                <td>240</td>
-              </tr>
-              <tr>
-                <td>Arterial Blood Gases</td>
-                <td>0</td>
-                <td>0</td>
-                <td>10</td>
-                <td>3</td>
-                <td>240</td>
-                <td>240</td>
+                <td class="hyperlink">
+                  <a href="#">
+                    <span
+                      class="bg-yellow-600 px-3 py-1 rounded-full text-white"
+                      >Incomplete</span
+                    ></a
+                  >
+                </td>
+                <td>Roland Mendel</td>
+                <td>Austria</td>
+                <td>Austria</td>
+                <td>Austria</td>
+                <td>Austria</td>
+                <td>Austria</td>
+                <td>Austria</td>
+                <td>Austria</td>
+                <td>Austria</td>
+                <td>Austria</td>
+                <td>Austria</td>
+                <td>Austria</td>
+                <td>Austria</td>
+                <td>Austria</td>
+                <td>Austria</td>
               </tr>
             </tbody>
-            <thead>
-              <tr>
-                <th colspan="4">Chemsitry(Entitled)Total:</th>
-                <th>59</th>
-                <th>569</th>
-                <th>569</th>
-              </tr>
-            </thead>
           </table>
         </div>
       </div>
@@ -853,17 +1090,29 @@
     <!-- DataTables and Buttons -->
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 
     <!-- Your custom script -->
     <script src="../js/script.js"></script>
 
     <!-- SumoSelect Initialization -->
     <script></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdownBtn = document.getElementById("dropdownBtn");
+        const dropdownContent = document.getElementById("display-content");
+
+        dropdownBtn.addEventListener("click", function () {
+          if (dropdownContent.classList.contains("none")) {
+            dropdownContent.classList.remove("none");
+            dropdownContent.classList.add("show");
+            console.log("Dropdown is shown");
+          } else {
+            dropdownContent.classList.remove("show");
+            dropdownContent.classList.add("none");
+            console.log("Dropdown is hidden");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

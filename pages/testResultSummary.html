@@ -456,22 +456,39 @@
                 </div>
               </div>
               <div
-                class="mb-3 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
+                class="md:w-80 mb-5 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-2"
               >
-                <div id="">
-                  <label
-                    for="labNo"
-                    class="sm:text-sm mb-1 text-black text-lg font-semibold tracking-wide block"
-                    >Lab No.:</label
-                  >
+                <label
+                  for="Labno"
+                  class="sm:text-sm md:text-lg text-black text-lg font-semibold tracking-wide block"
+                  >Lab No.:</label
+                >
+                <div class="sm:grid md:grid lg:grid xl:grid rangeLike flex">
                   <select
-                    multiple="multiple"
-                    class="combined-select"
-                    id="labNo"
+                    name="rangeSelectLab"
+                    id="orderCriteria"
+                    class="sm:w-60 lg:w-80 xl:w-80 rangeSelectLab px-3 py-2 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                   >
-                    <option value="lab1">Lab1</option>
-                    <option value="lab2">Lab2</option>
+                    <option
+                      value="Like"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Like
+                    </option>
+                    <option
+                      value="Range"
+                      class="text-gray-700 block px-4 py-2 text-sm"
+                    >
+                      Range
+                    </option>
                   </select>
+                  <input
+                    id="Labno"
+                    name="Labno"
+                    type="text"
+                    class="sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                    placeholder="Lab No."
+                  />
                 </div>
               </div>
             </div>
@@ -667,6 +684,27 @@
     <script src="../js/script.js"></script>
 
     <!-- SumoSelect Initialization -->
-    <script></script>
+    <script>
+      var labRangeSelector = $(".rangeSelectLab");
+
+      labRangeSelector.on("change", function () {
+        var to = $("#fromToLab");
+        $(this).nextAll("input, label").remove();
+        if ($(this).val() === "Range") {
+          $(this).after(
+            "<div id='fromToLab' class='sm:grid md:grid lg:grid xl:grid flex justify-between'>" +
+              "<input id='fromLab' name='fromLab' type='text'  placeholder='From Lab' class='sm:ml-0 sm:w-60 md:ml-0 md:w-80 lg:ml-0 lg:w-80 xl:w-80 xl:ml-0 w-56 ml-2 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' />" +
+              "<p id='toText' style='padding: 10px'> To </p> " +
+              "<input id='toLab' name='toLab' type='text' placeholder='To Lab' class='sm:ml-0 sm:w-60 md:w-80 lg:ml-0 lg:w-80 xl:w-80 w-56 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' />" +
+              "</div>"
+          );
+        } else if ($(this).val() === "Like") {
+          to.remove();
+          $(this).after(
+            " <input id='Labno'name='Labno'type='text' class='sm:w-60 md:w-80 lg:w-80 xl:w-80 xxl:w-72 mr-3 w-80 mt-1 px-3 py-2 shadow-lg ring-1 bg-white border rounded-md text-sm placeholder-slate-400 focus:outline-none focus:border-blue-800 focus:ring-2 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500' placeholder='Lab No.'' />"
+          );
+        }
+      });
+    </script>
   </body>
 </html>

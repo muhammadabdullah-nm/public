@@ -1,6 +1,7 @@
 /* ----------------------------MAIN PAGE CSS----------------------- */
 body {
   background: #efefef;
+  font-family: sans-serif;
 }
 .button {
   background-color: #0bad72;
@@ -8,15 +9,14 @@ body {
   font-size: 17px;
   color: #ffffff;
   padding: 12px 15px;
-  width: 100%;
   text-align: left;
-  text-decoration: none;
   overflow: hidden;
   cursor: pointer;
   border-radius: 8px;
   margin: 7px;
   display: block;
   border-left: #036d46 5px solid;
+  text-decoration: none;
   font-weight: 500;
 }
 
@@ -37,7 +37,7 @@ h3 {
 
 .ts {
   display: grid;
-  grid-template-columns: repeat(3, 500px);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 75px);
   gap: 2px;
 }
@@ -52,6 +52,74 @@ h3 {
   background: #fff;
   padding: 10px;
   border-radius: 10px;
+}
+
+/* Media Queries for different screen sizes */
+@media (min-width: 320px) and (max-width: 480px) {
+  .ts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Media Queries for different screen sizes */
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  div {
+    font-size: 12px;
+  }
+  .ts {
+    grid-template-rows: repeat(3, 0fr);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1080px) {
+ html {
+    font-size: 14px;
+  }
+  div {
+    font-size: 14px;
+  }
+  .ts {
+    grid-template-rows: repeat(3, 0fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1081px) and (max-width: 1180px) {
+  .ts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1181px) and (max-width: 1480px) {
+  .ts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1481px) and (max-width: 1600px) {
+  .ts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1601px) and (max-width: 1800px) {
+  .ts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* --------------------------NAVBAR CSS-------------------------------- */
+.h-16 {
+  height: 4rem /* 64px */;
+}
+.w-16 {
+  width: 4rem /* 64px */;
+}
+.mr-2 {
+  margin-right: 0.5rem /* 8px */;
 }
 
 /* ----------------------------RESULT TABLE CSS---------------------------- */
@@ -72,7 +140,9 @@ h3 {
   border: 1px solid #ddd;
   padding: 8px;
   font-size: 14px;
+  text-wrap: nowrap;
 }
+
 
 #example th,
 .example th,
@@ -81,6 +151,7 @@ h3 {
   padding: 8px;
   font-size: 13px;
   font-weight: bold;
+  text-wrap: nowrap;
 }
 
 #example tr:nth-child(even),

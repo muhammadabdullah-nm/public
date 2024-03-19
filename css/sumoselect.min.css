@@ -14,7 +14,7 @@
   width: 20rem;
 }
 .SelectBox {
-  padding: 6px 9px;
+  padding: 2px 9px;
   border-radius: 0.375rem !important;
 }
 .sumoStopScroll {
@@ -413,7 +413,7 @@
   }
 
   .SumoSelect {
-    width: 20rem;
+    width: 25rem;
   }
 }
 
